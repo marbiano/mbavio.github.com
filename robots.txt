@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://mbavio.github.io/sitemap.xml 
+Sitemap: http://martinbavio.com/sitemap.xml 

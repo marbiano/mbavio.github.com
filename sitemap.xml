@@ -1,15 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://mbavio.github.io/blog/archives/</loc>
+        <loc>http://martinbavio.com/blog/archives/</loc>
         <lastmod>2013-05-07T13:03:30-03:00</lastmod>
     </url>
     <url>
-        <loc>http://mbavio.github.io/</loc>
+        <loc>http://martinbavio.com/blog/</loc>
+        <lastmod>2013-05-07T17:01:47-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://martinbavio.com/</loc>
+        <lastmod>2013-05-15T19:57:08-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://martinbavio.com/robots.txt</loc>
         <lastmod>2013-05-07T13:03:30-03:00</lastmod>
     </url>
     <url>
-        <loc>http://mbavio.github.io/robots.txt</loc>
-        <lastmod>2013-05-07T13:03:30-03:00</lastmod>
+        <loc>http://martinbavio.com/work/educabilia.html</loc>
+        <lastmod>2013-05-15T19:57:08-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://martinbavio.com/work/threadcouncil.html</loc>
+        <lastmod>2013-05-15T19:57:08-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://martinbavio.com/work/wulia.html</loc>
+        <lastmod>2013-05-15T19:57:08-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://martinbavio.com/work/zokos.html</loc>
+        <lastmod>2013-05-15T19:57:08-03:00</lastmod>
     </url>
 </urlset>

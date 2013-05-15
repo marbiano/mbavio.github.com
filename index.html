@@ -1,122 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test drive</title>
+    <script type="text/javascript" src="//use.typekit.net/ief3tnj.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript">
+      WebFontConfig = { fontdeck: { id: '850' } };
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>My Octopress Blog</title>
-  <meta name="author" content="Your Name">
-
-  
-  <meta name="description" content=" Blog Archives Recent Posts ">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://mbavio.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:mbavio.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" 
+    type="text/css" />
+    <script src="/javascripts/modernizr-2.0.js"></script>
+    <style type="text/css">
+      /* Apply (proposed) CSS style. Plugin looks for elements with class named "balance-text" */
+      .balance-text {
+        text-wrap: balanced;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="l-simple">
+  <nav>
+    <ul>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Blog</a></li>
+      <li class="logo"><a href="#"><img src="images/logo.png" /></a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h1 class="my-name">I am Martin Bavio.</h1>
+  <h2 class="my-belief"><span>I believe in</span> defying the status quo of Internet &amp people around it.</h2>
+  <div class="belief-support work">
+    <h3>I support that belief by <span>building</span> user interfaces for game changer projects.</h3>
+    <div class="project"> 
+      <div class="p-preview">
+        <img src="images/tc-preview.png" />
+      </div>
+      <div class="p-name">Thread Council</div>
+      <div class="p-slogan">The Robin Hood of man&#8217;s apparel.</div>
+      <div class="p-tasks">Advances in technology have proven many times that convenience often trumps fidelity. For example, MP3s became popular — even at their initial low bitrates — because it was more important for us to have all of our music available wherever we were than it was to have the best possible audio quality. Similarly, digital books, magazines, and newspapers are replacing their analog counterparts at an increasing rate because convenient and instant access to content frequently supersedes aesthetics.</div>
+      <div class="p-go-full"><a href="/work/threadcouncil.html" class="button">Read story &raquo;</a></div>
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+  <div class="belief-support blog">
+    <h3>I also like <span>writing</span> about things that live on my mind.</h3>
+    <div class="post">
+      <img src="images/mulder.jpg" />
+      <div class="p-title">I want to believe</div>
+      <div class="p-summary">An essay about how important is to think why first.</div>
+      <div class="p-go-full"><a href="#" class="button">Read post &raquo;</a></div>
+    </div>
+  </div>
+  <div class="belief-support create">
+    <h3>Sometimes I feel like <span>creating</span> my own projects.</h3>
+    <div class="project">
+      <img src="images/wulia-logo.png" />
+      <div class="p-name">Wulia</div>
+      <div class="p-slogan">Creating a local startup revolution.</div>
+      <div class="p-tasks">Idea, planification, interface design &amp; frontend code.</div>
+      <div class="p-go-full"><a href="#" class="button">Read story &raquo;</a></div>
+    </div>
+  </div>
+  <div class="about-me">
+    <h3>A working class hero</h3>
+    <p>I live in Villa Carlos Paz, a beautiful small town located in Argentina. I have a beautiful daugther, and a dog who just can&#8217;t stop barking. I also got the girl of my dreams. If you wanna talk about some project or just wanna share your own beliefs with me, feel free to shoot me an email anytime. I answer all my emails.</p>
+    <ul class="socialc-connect">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Github</a></li>
+      <li><a href="#">Dribbble</a></li>
+    </ul>
+  </div>
+</div>
 
-</footer>
-  
 
+<!-- <div class="content" style="margin-left: 2em; margin-top: 2em; width: 40em; margin: 5em auto"> &#8211;>
+<!-- <h1 style="font-family: Klavika; font-weight: bold; text-transform: uppercase; font-size: 3.5em; margin-bottom: 1em; text-align: center; line-height: 0.8;">Tributacion <span style="display: block; font-family: 'Baskerville Italic', arial, 'Times New Roman', Times, serif, serif; font-weight:normal; font-style:italic; font-size: 0.6em; margin-top: 0.25em; text-transform: lowercase">para garcas</span></h1> &#8211;>
 
+<!-- <p style="font-family: 'Baskerville Regular', arial, 'Times New Roman', Times, serif, serif; font-weight:normal; font-style:normal;">Emmet takes the snippets idea to a whole new level: you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abbreviation. Emmet is developed and optimised for web-developers whose workflow depends on HTML/XML and CSS, but can be used with programming languages too.</p> &#8211;>
 
+<!-- <h2 style="font-family: Klavika; font-weight: bold; font-size: 2em; margin-bottom: 1em;">Una segunda opinion</h2> &#8211;>
 
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
+</div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="/javascripts/libs/jquery.balancetext.js"></script>
+  </body>
 </html>
