@@ -4,7 +4,19 @@
     <title>Test drive</title>
     <script type="text/javascript" src="//use.typekit.net/ief3tnj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <link rel="stylesheet" href="//f.fontdeck.com/s/css/BYIdloiyr75z6gbZBPq6eYPYeJQ/martinbavio.com/850.css" type="text/css" />
+    <script type="text/javascript">
+      WebFontConfig = { fontdeck: { id: '850' } };
+
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" 
     type="text/css" />
     <script src="/javascripts/modernizr-2.0.js"></script>
@@ -16,8 +28,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="l-simple">
+    <div class="l-simple">
   <nav>
     <ul>
       <li><a href="#">Work</a></li>
@@ -69,7 +80,6 @@
     </div>
   </div>
 </div>
-    </div>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="/javascripts/libs/jquery.balancetext.js"></script>
   </body>
