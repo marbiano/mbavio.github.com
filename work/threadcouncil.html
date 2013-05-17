@@ -1,7 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Test drive</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>The digital home of Martin Bavio</title>
+    <meta name="author" content="Martin Bavio" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <script type="text/javascript" src="//use.typekit.net/ief3tnj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript">
@@ -20,20 +23,14 @@
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" 
     type="text/css" />
     <script src="/javascripts/modernizr-2.0.js"></script>
-    <style type="text/css">
-      /* Apply (proposed) CSS style. Plugin looks for elements with class named "balance-text" */
-      .balance-text {
-        text-wrap: balanced;
-      }
-    </style>
   </head>
   <body>
-    <div class="l-simple">
+    <div class="l-simple-hidden">
   <nav>
     <ul>
       <li><a href="/work">Work</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li class="logo"><a href=""><img src="../images/logo.png" /></a></li>
+      <li class="logo"><a href="/"><img src="../images/logo.png" /></a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
@@ -55,7 +52,7 @@
         </li>
         <li>
           <h3>URL</h3>
-          <div><a href="#">threadcouncil.com</a></div>
+          <div><a href="http://www.threadcouncil.com">threadcouncil.com</a></div>
         </li>
       </ul>
     </div>
@@ -108,7 +105,7 @@
           <h3>What tools do we use to build the front-end?</h3>
           <p>At early stages, we used <a href="http://pencil.evolus.vn">Pencil</a> &amp; <a href="http://www.invisionapp.com">Invision App</a> for quickly functional prototyping. For high fidelity designs we used <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a>.</p>
           <p>The web app was built in a <a href="http://rubyonrails.org">Rails 3.2</a> environment, so the front-end took advantage of it to intregrate smoothly with a couple of things Rails has by default, like asset pipeline that automatically joins and minifies CSS &amp; Javascript.</p>
-          <p>In order to build the front-end, we used semantic HTML5 for the markup, <a href="http://sass-lang.com">Sass</a> + <a href="http://compass-style.org">Compass</a> + <a href="http://susy.oddbird.net">Susy</a> for the visual styling, and <a href="http://jquery.com">jQuery</a> + <a href="http://backbonejs.org">Backbone.js</a> for behavior and widgets. We also based our CSS architecture on concepts from <a href="http://smacss.com">SMACSS</a>, and used <a href="http://mustache.github.io">Mustache</a> to have templates that could be used as Rails partials or Backbone views.</p>
+          <p>In order to build the front-end, we used semantic HTML5 for the markup, <a href="http://sass-lang.com">Sass</a> + <a href="http://compass-style.org">Compass</a> + <a href="http://susy.oddbird.net">Susy</a> for the visual styling, and <a href="http://jquery.com">jQuery</a> + <a href="http://backbonejs.org">Backbone.js</a> for behavior and widgets. We also based our CSS architecture on concepts from <a href="http://smacss.com">SMACSS</a>, and used <a href="http://mustache.github.io">Mustache</a> to have templates that could be used as Rails partials or Backbone templates.</p>
         </div>
       </div>
     </div>
@@ -120,5 +117,10 @@
 </div>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="/javascripts/libs/jquery.balancetext.js"></script>
+    <script type="text/javascript">
+      $(window).load(function() {
+        $('.l-simple-hidden').addClass('l-simple');
+      });
+    </script>
   </body>
 </html>

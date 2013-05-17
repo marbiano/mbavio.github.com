@@ -1,7 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Test drive</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>The digital home of Martin Bavio</title>
+    <meta name="author" content="Martin Bavio" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <script type="text/javascript" src="//use.typekit.net/ief3tnj.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript">
@@ -20,62 +23,89 @@
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" 
     type="text/css" />
     <script src="/javascripts/modernizr-2.0.js"></script>
-    <style type="text/css">
-      /* Apply (proposed) CSS style. Plugin looks for elements with class named "balance-text" */
-      .balance-text {
-        text-wrap: balanced;
-      }
-    </style>
   </head>
   <body>
-    <div class="l-simple">
+    <div class="l-simple-hidden">
   <nav>
     <ul>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">Blog</a></li>
-      <li class="logo"><a href="#"><img src="../images/logo.png" /></a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li class="logo"><a href="/"><img src="../images/logo.png" /></a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
   <h1 class="page-title">Educabilia</h1>
   <h2 class="page-subtitle">Learn new things everyday.</h2>
-  <div class="collage"><img src="../images/threadcouncil/collage.png" /></div>
-  <div class="work-overview balance-text" style="font-family: Klavika; font-weight: 100">Educabilia is a latin-american startup who is giving people the power to teach what they know, and learn new exciting things everyday. I was asked to work on realigning the app interface, with special attention into making new version device friendly.</div>
-  <div class="work-meta">
-    <ul>
-      <li>
-        <h3>Date</h3>
-        <div>Aug 2012 - Nov 2012</div>
-      </li>
-      <li>
-        <h3>State</h3>
-        <div>Not live yet</div>
-      </li>
-      <li>
-        <h3>URL</h3>
-        <div><a href="#">www.educabilia.com</a></div>
-      </li>
-    </ul>
-  </div>
-  <div class="work-details">
-    <div class="section mac-full">
-      <p>Old course page presented a couple of usability problems, so we realign it highlighting courses key information (date, location, modality) while keeping a general brand aesthetic but improving in the details.</p>
-      <div class="image-full"><img src="../images/threadcouncil/artist-page-on-mac.jpg" /></div>
+  <div class="container">
+    <div class="work-overview balance-text">Educabilia is a latin-american startup who is giving people the power to teach what they know, and learn new exciting things everyday. I was asked to work on realigning the user interface, with special attention into making the new version responsive to different devices.</div>
+    <div class="work-meta">
+      <ul>
+        <li>
+          <h3>Date</h3>
+          <div>Aug 2012 - Nov 2012</div>
+        </li>
+        <li>
+          <h3>State</h3>
+          <div>Work in progress</div>
+        </li>
+        <li>
+          <h3>URL</h3>
+          <div><a href="http://staging.educabilia.com.ar">www.educabilia.com</a></div>
+        </li>
+      </ul>
     </div>
-    <hr class="separator" />
-    <div class="section ipad-portrait">
-      <p>Homepage and event list pages were also updated, fixing some usability issues and refreshing the look &amp; feel of them, to stay consistent with new design direction.</p>
-      <div class="image-full"><img src="../images/threadcouncil/product-page-on-ipad.jpg" /></div>
+    <div class="work-details">
+      <div class="section mac-full image-before">
+        <div class="image"><img src="../images/educabilia/class-page-on-mac.jpg" /></div>
+        <div class="text">
+          <p>Old class page had a couple of usability problems, mostly it lacked of a proper visual hierarchy. We change the page to highlight class key information (date, location, modality) and we saw inmediately after how fast and easy was to read and undertand the new class page.</p>
+        </div>
+      </div>
+      <hr class="separator" />
+      <div class="section screenshot-full image-after">
+        <div class="text">
+          <p>Home page &amp; class search page were also updated, fixing  usability issues and refreshing the general look &amp; feel of them, to stay consistent with new design direction.</p>
+        </div>
+        <div class="image"><img src="../images/educabilia/home-page.jpg" /></div>
+      </div>
+      <hr class="separator" />
+      <div class="section screenshot-full image-before">
+        <div class="image"><img src="../images/educabilia/class-list-on-devices.jpg" /></div>
+        <div class="text">
+          <p>Right from the beggining, we worked with one concept as our guide for all the planning, design &amp; build: <a href="http://www.markboulton.co.uk/journal/a-richer-canvas">content first</a>. In a nutshell, we used real content and ideal line-length for our typography selections, to determine a page grid, and from there we made the site to respond based on how many grid columns a certain device could handle.</p>
+        </div>
+      </div>
+      <hr class="separator" />
+      <div class="section screenshot-full image-before">
+        <div class="image"><img src="../images/educabilia/photo-class.jpg" /></div>
+        <div class="text">
+          <p>Tons of events are created on Educabilia each month, online &amp; offline. That means hundreds of people learning at least one new thing each month. Talking about changing the world.</p>
+        </div>
+      </div>
+      <hr class="separator" />
+      <div class="section screenshot-full image-before">
+        <div class="image"><img src="../images/educabilia/tools.png" /></div>
+        <div class="text">
+          <h3>What tools do we use to build the front-end?</h3>
+          <p>We did most of our sketches in paper, then moved to <a href="http://www.balsamiq.com/products/mockups">Balsamiq Mockups</a> propotypes, and we ditched <a href="http://www.adobe.com/products/photoshop.html">Photoshop</a> for high fidelity comps, we designed in the browser directly.</p>
+          <p>The web app was built in a Ruby microframework called <a href="http://cuba.is">Cuba</a>, and the front-end architecture was very customized, in order to improve speed of the site. No jQuery, just tiny js libraries each one doing one needed thing.</p>
+          <p>In order to build the front-end, we used semantic HTML5 for the markup, <a href="http://sass-lang.com">Sass</a> + <a href="http://compass-style.org">Compass</a> + <a href="http://susy.oddbird.net">Susy</a> for the visual styling, and as already mentioned, several small js libraries like <a href="http://sandeepjain.github.io/fayer/">Fayer</a>, <a href="https://github.com/fat/bean">Bean</a>, <a href="http://www.dustindiaz.com/qwery">qwery</a> and <a href="https://code.google.com/p/microajax/">MicroAjax</a>, among others. We also based our CSS architecture on concepts from <a href="http://smacss.com">SMACSS</a>.</p>
+        </div>
+      </div>
     </div>
-    <hr class="separator" />
-    <div class="section screenshot-right">
-      <p>All updates were done using mobile-first methodology, so the new site fits perfectly into any device.</p>
-      <div class="image-full"><img src="../images/threadcouncil/inspirations-page.jpg" /></div>
+    <div class="connection">
+      <h3>Do you like what I do?</h3>
+      <p>That&#8217;s great! You can <a href="mailto:mbavio@gmail.com">contact me</a> if you are interesting in my services. Wanna keep looking around? <a href="/work/wulia.html">Read Wulia case study</a>.</p>
     </div>
   </div>
 </div>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="/javascripts/libs/jquery.balancetext.js"></script>
+    <script type="text/javascript">
+      $(window).load(function() {
+        $('.l-simple-hidden').addClass('l-simple');
+      });
+    </script>
   </body>
 </html>
