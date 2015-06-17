@@ -39,6 +39,20 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: 'content',
+          src: [
+            'CNAME'
+          ],
+          dest: '.tmp',
+        }]
+      }
+    },
+
     sass: {
       options: {
         sourceMap: true,
@@ -125,8 +139,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['clean', 'jekyll', 'sass', 'postcss', 'coffee', 'connect', 'watch']);
+  grunt.registerTask('default', ['clean', 'copy', 'jekyll', 'sass', 'postcss', 'coffee', 'connect', 'watch']);
 
 };

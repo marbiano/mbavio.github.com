@@ -1,0 +1,4 @@
+method: git
+site_dir: .tmp
+git_url: git@github.com:mbavio/mbavio.github.com
+git_branch: master
