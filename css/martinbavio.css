@@ -394,7 +394,13 @@ body {
   @media (min-width: 820px) {
     .content__aside {
       display: block;
-      width: 14.6341463415%; } }
+      width: 14.6341463415%; }
+      .is-collage-activated .content__aside {
+        left: 120px;
+        right: 0;
+        z-index: 9999;
+        -webkit-transform: rotate(0);
+                transform: rotate(0); } }
   @media (min-width: 960px) {
     .content__aside {
       width: 27.0833333333%;
@@ -416,6 +422,23 @@ body {
   @media (min-width: 1380px) {
     .content__aside {
       width: 28.9855072464%; } }
+
+.content__aside__collage img {
+  display: block; }
+
+.content__aside__collage:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: rgba(100, 65, 165, 0.925); }
+
+.is-activated .content__aside__collage:before {
+  background: none; }
 
 .content__main__title {
   font-family: "klavika-web-display";
