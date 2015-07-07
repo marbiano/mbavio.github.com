@@ -331,7 +331,11 @@ body {
     .header__nav__item a:hover {
       color: rgba(0, 0, 0, 0.75); }
     .header__nav__item .is-active a {
-      color: #000; } }
+      color: #000; }
+    .header__nav__item.is-hire a {
+      color: #6441A5;
+      line-height: 1;
+      border-bottom: 1px solid rgba(100, 65, 165, 0.35); } }
 
 .content {
   padding-top: 100px; }
@@ -466,7 +470,8 @@ body {
     .content__main__title {
       font-size: 72px;
       padding-bottom: .1em;
-      margin-bottom: .6em; } }
+      margin-bottom: .6em;
+      padding-top: .5em; } }
 
 .content__main__intro {
   font-family: "Benton Modern";
