@@ -1,0 +1,45 @@
+$responsive: (
+  bp4: (
+    width: calculate-bp(4, 2),
+    reactions: (
+      container: (
+        classname: '.container',
+        mixins: (
+          container
+        ),
+        rules: (
+          margin-left: $grid-margin-side,
+          margin-right: $grid-margin-side,
+        )
+      )
+    )
+  ),
+  bp5: (
+    width: calculate-bp(5, 2),
+    reactions: (
+      container: (
+        classname: '.container',
+        mixins: (
+          container
+        ),
+      )
+    )
+  )
+);
+
+@each $bpname, $bpcontent in $responsive {
+  @include susy-breakpoint(map-get($bpcontent, width)) {
+    @each $reaction, $content in map-get($bpcontent, reactions) {
+      #{map-get($content, 'classname')} {
+        @each $mixin in map-get($content, 'mixins') {
+          @if $mixin == container {
+            @include container();
+          }
+        }
+        @each $left, $right in map-get($content, 'rules') {
+           #{$left}: #{$right};
+        }
+      }
+    }
+  };
+}

@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         map: true,
         processors: [
           require('autoprefixer-core')({browsers: 'last 1 version'}),
-          require('csswring')
+          // require('csswring')
         ]
       },
       dist: {
@@ -94,6 +94,51 @@ module.exports = function(grunt) {
           dest: '.tmp/js',
           ext: '.js'
         }]
+      }
+    },
+
+    imagemin: {
+      png: {
+        options: {
+          optimizationLevel: 7
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'assets/images',
+            src: ['**/*.png'],
+            dest: '.tmp/img',
+            ext: '.png'
+          }
+        ]
+      },
+      jpg: {
+        options: {
+          progressive: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'assets/images',
+            src: ['**/*.{jpg,jpeg}'],
+            dest: '.tmp/img',
+            ext: '.jpg'
+          }
+        ]
+      }
+    },
+
+    svgmin: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'assets/images',
+            src: ['**/*.svg'],
+            dest: '.tmp/img',
+            ext: '.svg'
+          }
+        ]
       }
     },
 
@@ -125,6 +170,14 @@ module.exports = function(grunt) {
         files: ['assets/scripts/**/*.coffee'],
         tasks: ['coffee']
       },
+      images: {
+        files: ['assets/images/**/*.{png,jpg,jpeg}'],
+        tasks: ['newer:imagemin'],
+      },
+      svg: {
+        files: ['assets/images/**/*.{svg}'],
+        tasks: ['newer:svgmin'],
+      }
     },
   });
 
@@ -134,14 +187,17 @@ module.exports = function(grunt) {
   // we can only load these if they are in our package.json
   // make sure you have run npm install so our app can find these
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['clean', 'copy', 'jekyll', 'sass', 'postcss', 'coffee', 'connect', 'watch']);
+  grunt.registerTask('default', ['clean', 'copy', 'imagemin', 'svgmin', 'jekyll', 'sass', 'postcss', 'coffee', 'connect', 'watch']);
 
 };

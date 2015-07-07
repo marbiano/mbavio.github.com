@@ -1,0 +1,231 @@
+@import "../../bower_components/reset-scss/reset";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+@mixin smooth-text() {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(#000, 0.004);
+}
+
+$newLogoProportion: 198/185;
+$oldLogoProportion: 41/46;
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(halfFadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .25;
+  }
+}
+
+@include keyframes(fadeOut) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+body {
+  @include smooth-text;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: -.25em;
+  }
+}
+
+.landing__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../img/landing-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: .001;
+  animation-name: halfFadeIn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+}
+
+.landing {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.landing__identity {
+  width: em(198px);
+  height: em(198px)/$newLogoProportion;
+  margin: 0 auto;
+  position: relative;
+
+  span {
+    display: none;
+  }
+
+  .is-old {
+    display: block;
+    width: em(41px);
+    height: em(41px)/$oldLogoProportion;
+    background-image: url('../img/old_logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: em(108px);
+    left: em(81px);
+    z-index: 3;
+    animation-name: fadeOut;
+    animation-duration: .5s;
+    animation-delay: 1.8s;
+    animation-fill-mode:forwards;
+  }
+
+  .is-new {
+    display: block;
+    width: em(198px);
+    height: em(198px)/$newLogoProportion;
+    background-image: url('../img/new_logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode:forwards;
+  }
+}
+
+.landing__title {
+  text-align: center;
+  margin-top: 5em;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+
+  .is-main {
+    display: block;
+    font-family: "klavika-web-display";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: em(60px);
+    line-height: 1;
+  }
+
+  .is-secondary {
+    display: block;
+    font-family: BentonModernDisp;
+    font-size: em(30px);
+    line-height: 1;
+    color: rgba(#000, .9);
+  }
+}
+
+.landing__message {
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+
+  p {
+    font-family: "Benton Modern";
+    font-size: em(18px);
+    line-height: 1;
+    margin: 0;
+    display: inline-block;
+    background: rgba(#fff, 1);
+    color: rgba(#000, .75);
+    padding: .4em .5em .5em;
+  }
+
+  .is-dribbble-link {
+    color: #EA4C89;
+
+    &:hover {
+      color: lighten(#EA4C89, 10%);
+    }
+  }
+}
+
+.landing__links {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+}
+
+.landing__links__item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: .5em;
+  }
+
+  a {
+    display: block;
+    opacity: .5;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    span {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.is-contact  a:before {
+    width: em(24px);
+    height: em(22px);
+    background-image: url('../img/icons/paper-plane.svg');
+  }
+
+  &.is-twitter  a:before {
+    width: em(24px);
+    height: em(19px);
+    background-image: url('../img/icons/twitter.svg');
+  }
+}

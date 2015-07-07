@@ -1,0 +1,530 @@
+@import "../../bower_components/reset-scss/reset";
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../../bower_components/susy/sass/susy";
+@import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+$grid-column-count: 2;
+$grid-column-width: 120px;
+$grid-gutter-width: 20px;
+$grid-margin-side: 30px;
+
+@function calculate-bp ($columns) {
+  @return $columns * $grid-column-width + ($columns - 1) * $grid-gutter-width;
+};
+
+$grid-column-sizes: (
+  4: calculate-bp(4),
+  5: calculate-bp(5),
+  6: calculate-bp(6),
+  7: calculate-bp(7),
+  8: calculate-bp(8),
+  9: calculate-bp(9),
+  10: calculate-bp(10)
+);
+
+$susy: (
+  columns: $grid-column-count,
+  gutters: $grid-gutter-width / $grid-column-width,
+  global-box-sizing: border-box,
+  debug: (image: hide)
+);
+
+@mixin on-columns($number-of-columns, $spread: true) {
+  @each $cols in $number-of-columns {
+    @if $spread == true {
+      @include susy-breakpoint(map-get($grid-column-sizes, $cols), $cols) {
+        @content;
+      }
+    } @else {
+      @include susy-breakpoint(map-get($grid-column-sizes, $cols) map-get($grid-column-sizes, $cols + 1), $cols) {
+        @content;
+      }
+    }
+  }
+};
+
+@mixin smooth-text() {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(#000, 0.004);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  @include smooth-text;
+}
+
+.container {
+  @include container;
+  margin-left: $grid-margin-side;
+  margin-right: $grid-margin-side;
+
+  @include on-columns(4, false) {
+    @include container;
+    margin-left: $grid-margin-side;
+    margin-right: $grid-margin-side;
+  };
+
+  @include on-columns(5 6 7 8 9 10) {
+    @include container;
+  };
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 50;
+  @include clearfix;
+  background: #fff;
+  margin-left: -30px;
+  margin-right: -30px;
+  box-shadow: rgba(#000, .1) 0 1px 3px 1px;
+
+  @include on-columns(5) {
+    position: static;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: none;
+  }
+}
+
+.header__brand {
+  @include clearfix;
+
+  @include on-columns(5) {
+    width: span(1);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  };
+
+  @include on-columns(6 7 8 9 10) {
+    width: span(1);
+  };
+}
+
+.header__brand__logo {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  a {
+    font-size: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/new_logo.svg');
+    background-repeat: no-repeat;
+    background-size: 33px 30px;
+    background-position: center;
+
+  }
+
+  @include on-columns(5) {
+    float: none;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: rgba(#D8D8D8, .25);
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 0;
+      display: block;
+      width: 43px;
+      height: 40px;
+      background-size: cover;
+      margin-left: (80px - 43px) / 2;
+      margin-top: 20px;
+    }
+  }
+}
+
+.header__brand__social {
+  float: right;
+  width: auto;
+  margin-top: .6em;
+  margin-right: .6em;
+
+  @include on-columns(5) {
+    float: none;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+.header__brand__social__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .5em;
+
+  a {
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+    opacity: .35;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+
+  &.is-email a {
+    width: 21px;
+    height: 14px;
+    background-image: url('../img/icons/letter.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.is-twitter a {
+    width: 20px;
+    height: 16px;
+    background-image: url('../img/icons/twitter.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.is-dribbble a {
+    width: 19px;
+    height: 19px;
+    background-image: url('../img/icons/dribbble.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.is-github a {
+    width: 20px;
+    height: 19px;
+    background-image: url('../img/icons/github.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.is-nav a {
+    width: 16px;
+    height: 14px;
+    background-image: url('../img/icons/menu.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.is-dribbble, &.is-github {
+    display: none;
+  }
+
+  @include on-columns(5) {
+    display: block;
+    margin-right: 0;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: .5em;
+    }
+
+    &.is-dribbble, &.is-github {
+      display: block;
+    }
+
+    &.is-nav {
+      display: none;
+    }
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @include on-columns(5) {
+    display: block;
+    position: absolute;
+    left: span(1 wide);
+    top: 0;
+    width: auto;
+    height: 120px;
+  };
+
+  @include on-columns(6 7 8 9 10) {
+    left: span(1 wide);
+    width: auto;
+  };
+}
+
+.header__nav__item {
+  @include on-columns(5) {
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 120px;
+
+    &:not(:last-child) {
+      margin-right: 1.5em;
+    }
+
+    a { color: rgba(#000, .5); text-decoration: none; }
+    a:hover { color: rgba(#000, .75); }
+    .is-active a { color: #000; }
+  }
+}
+
+.content {
+  padding-top: 100px;
+
+  @include on-columns(5) {
+    padding-top: 0;
+    margin-top: 120px;
+    margin-left: span(1 wide);
+  };
+
+  @include on-columns(6 7 8 9 10) {
+    margin-left: span(1 wide);
+  };
+}
+
+.content__main {
+  @include on-columns(5, false) {
+    max-width: span(4 of 4);
+    margin-right: $grid-margin-side;
+  };
+
+  @include on-columns(6) {
+    max-width: span(4 of 5);
+  };
+
+  @include on-columns(7) {
+    max-width: span(4 of 6);
+  };
+
+  @include on-columns(8) {
+    max-width: span(4 of 7);
+  };
+
+  @include on-columns(9) {
+    max-width: span(4 of 8);
+    position: relative;
+    left: calc(100% - #{span(8 of 8 ($grid-column-width $grid-gutter-width) static)});
+  };
+
+  @include on-columns(10) {
+    max-width: span(4 of 9);
+    left: span(1 of 9 wide);
+  };
+}
+
+.content__aside {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #6441A5;
+
+  @include on-columns(6) {
+    display: block;
+    width: span(1 of 6);
+  };
+
+  @include on-columns(7) {
+    width: span(2 of 7);
+    box-sizing: content-box;
+    transform: rotate(-2deg);
+    transform-origin: left bottom;
+    top: -50px;
+    bottom: -50px;
+    right: -50px;
+    padding-right: 50px;
+  };
+
+  @include on-columns(8) {
+    width: span(2 of 8);
+  };
+
+  @include on-columns(9) {
+    width: span(3 of 9);
+  };
+
+  @include on-columns(10) {
+    width: span(3 of 10);
+  };
+}
+
+.content__main__title {
+  font-family: "klavika-web-display";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1.5;
+  padding-bottom: .3em;
+  margin-bottom: 1.25em;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 1.75em;
+    height: 0;
+    border-bottom: 5px solid #ecd200;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include on-columns(4) {
+    font-size: 60px;
+    padding-bottom: .2em;
+    margin-bottom: .75em;
+  };
+
+  @include on-columns(6) {
+    font-size: 72px;
+    padding-bottom: .1em;
+    margin-bottom: .6em;
+  }
+}
+
+.content__main__intro {
+  font-family: "Benton Modern";
+  font-size: 18px;
+  line-height: 1.333;
+
+  @include on-columns(4) {
+    font-size: 20px;
+  };
+
+  @include on-columns(6) {
+    font-family: BentonModernDisp;
+    font-size: 24px;
+    line-height: 1.333;
+  };
+}
+
+.content__main__text {
+  font-family: "Benton Modern";
+  font-size: em(18px);
+  line-height: 1.5;
+
+  h2 {
+    font-family: "Benton Sans";
+    font-style: normal;
+    font-weight: 900;
+    margin-bottom: .75em;
+    margin-top: 2em;
+  }
+}
+
+.content__main__meta__wrapper {
+  @include on-columns(7) {
+    transform: skewX(4deg);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    width: span(4.5 of 4);
+    margin-left: -10px;
+    left: -1 * gutter(4);
+  }
+
+  @include on-columns(8) {
+    width: span(5.5 of 4);
+    left: -1 * gutter(4);
+  }
+
+  @include on-columns(9) {
+    left: calc(-100% + #{span(4 of 4 ($grid-column-width $grid-gutter-width) static) - gutter(4 ($grid-column-width $grid-gutter-width) static)});
+  }
+
+  left: calc(100% - #{span(8 of 8 ($grid-column-width $grid-gutter-width) static)});
+
+  @include on-columns(10) {
+    left: -1 * span(1 of 4 wide);
+  }
+}
+
+.content__main__meta {
+  background: #291254;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  margin: 1.75em (-$grid-margin-side) 0;
+  padding: $grid-margin-side;
+
+  @include on-columns(5) {
+    margin-left: 0;
+    margin-right: 0;
+  };
+
+  @include on-columns(6) {
+    width: span(4.5 of 4);
+    margin-left: -1 * gutter(4);
+    @include clearfix;
+  };
+
+   @include on-columns(7) {
+    transform: skewX(-4deg);
+    width: 100%;
+    margin-left: 10px;
+  };
+
+  @include on-columns(10) {
+    margin-left: -1 * span(1 of 4 wide);
+  };
+}
+
+.content__main__meta__item {
+  @include clearfix;
+  font-size: 14px;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(#fff, .075);
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .is-label {
+    @include span(1 of 2);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(#fff, .5);
+  }
+
+  .is-definition {
+    @include span(1 of 2 last);
+  }
+
+  @include on-columns(6) {
+    @include span(1 of 3);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+
+    &:last-child {
+      @include last;
+    }
+
+    .is-label, .is-definition {
+      display: block;
+      float: none;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .is-label {
+      margin-bottom: .75em;
+    }
+  };
+}
