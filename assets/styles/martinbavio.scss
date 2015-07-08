@@ -566,3 +566,215 @@ body {
     }
   };
 }
+
+.works {
+  @include on-columns(5, false) {
+    width: span(4 of 4);
+    margin-right: $grid-margin-side;
+  };
+
+  @include on-columns(6) {
+    width: span(4 of 5);
+  };
+
+  @include on-columns(7) {
+    width: span(4 of 6);
+  };
+
+  @include on-columns(8) {
+    width: span(4 of 7);
+  };
+
+  @include on-columns(9) {
+    width: span(6 of 8);
+  };
+
+  @include on-columns(10) {
+    max-width: span(6 of 9);
+    margin-left: span(1 of 9 wide);
+  };
+}
+
+.works__list {
+  @include on-columns(5, false) {
+    margin-right: $grid-margin-side;
+  }
+
+  @include on-columns(5) {
+    @include clearfix;
+  }
+}
+
+.works__list__item {
+  @include span(1 of 2);
+  margin-bottom: gutter(2);
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(#000, .05);
+    border-radius: 2px;
+    font-size: 0;
+  }
+
+  &.is-worldly a {
+    background-image: url('../img/logos/worldly.svg');
+    background-repeat: no-repeat;
+    background-size: 130px 130px;
+    background-position: center;
+
+    &:hover {
+      border-color: #ecd200;
+    }
+  }
+
+  &.is-thread-council a {
+    background-image: url('../img/logos/thread_council.svg');
+    background-repeat: no-repeat;
+    background-size: 130px 83px;
+    background-position: center;
+
+    &:hover {
+      border-color: #000;
+    }
+  }
+
+  &.is-consignd a {
+    background-image: url('../img/logos/consignd.svg');
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-position: center;
+
+    &:hover {
+      border-color: #000;
+    }
+  }
+
+  &.is-tanga a {
+    background-image: url('../img/logos/tanga.svg');
+    background-repeat: no-repeat;
+    background-size: 80px 61px;
+    background-position: center;
+
+    &:hover {
+      border-color: #37B6E3;
+    }
+  }
+
+  &.is-stayful a {
+    background-image: url('../img/logos/stayful.svg');
+    background-repeat: no-repeat;
+    background-size: 170px 17.5px;
+    background-position: center;
+
+    &:hover {
+      border-color: #000;
+    }
+  }
+
+  &.is-educabilia a {
+    background-image: url('../img/logos/educabilia.svg');
+    background-repeat: no-repeat;
+    background-size: 161px 40px;
+    background-position: center;
+
+    &:hover {
+      border-color: #c4d367;
+    }
+  }
+
+  &.is-wulia a {
+    background-image: url('../img/logos/wulia.svg');
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+    background-position: center;
+
+    &:hover {
+      border-color: #1593a5;
+    }
+  }
+
+  &.is-gamamia a {
+    background-image: url('../img/logos/gamamia.svg');
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-position: center;
+
+    &:hover {
+      border-color: #fa5555;
+    }
+  }
+
+  &:nth-child(2n) {
+    @include last;
+  }
+
+  @include on-columns(5) {
+    @include span(2 of 4);
+    margin-bottom: gutter(4);
+
+    &:nth-child(2n) {
+      @include last;
+    }
+  }
+
+  @include on-columns(9) {
+    @include span(2 of 6);
+    margin-bottom: gutter(6);
+
+    &:nth-child(2n) {
+      @include span(2 of 6);
+    }
+
+    &:nth-child(3n + 2) {
+      @include last;
+    }
+
+    &:nth-child(1) {
+      @include span(3 of 6);
+    }
+
+    &:nth-child(2) {
+      @include span(3 of 6 last);
+    }
+  };
+}
+
+.works__title {
+  font-family: "klavika-web-display";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1;
+
+  @include on-columns(4) {
+    font-size: 60px;
+  };
+}
+
+.works__subtitle {
+  font-family: "Benton Modern";
+  font-size: 18px;
+  line-height: 1.333;
+  color: rgba(#000, .8);
+
+  @include on-columns(4) {
+    font-size: 20px;
+  };
+
+  @include on-columns(6) {
+    font-family: BentonModernDisp;
+    font-size: 24px;
+    line-height: 1.333;
+  };
+}
