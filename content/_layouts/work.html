@@ -10,15 +10,15 @@ layout: base
         <ul>
           <li class="content__main__meta__item">
             <div class="is-label">Client</div>
-            <div class="is-definition">Worldly</div>
+            <div class="is-definition">{{ page.client }}</div>
           </li>
           <li class="content__main__meta__item">
             <div class="is-label">Position</div>
-            <div class="is-definition">Lead Designer</div>
+            <div class="is-definition">{{ page.position }}</div>
           </li>
           <li class="content__main__meta__item">
             <div class="is-label">Date</div>
-            <div class="is-definition">Jul 2014 - Jun 2015</div>
+            <div class="is-definition">{{ page.date }}</div>
           </li>
         </ul>
       </div>
@@ -26,4 +26,8 @@ layout: base
   </div>
   <div class="content__main__text">{{ content }}</div>
 </div>
-<div class="content__aside"></div>
+<div class="content__aside">
+  <div class="content__aside__collage">
+    <img src="/img/tc-works.jpg" />
+  </div>
+</div>

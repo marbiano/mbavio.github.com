@@ -277,6 +277,14 @@ body {
     a { color: rgba(#000, .5); text-decoration: none; }
     a:hover { color: rgba(#000, .75); }
     .is-active a { color: #000; }
+
+    &.is-hire {
+      a {
+        color: #6441A5;
+        line-height: 1;
+        border-bottom: 1px solid rgba(#6441A5, .35);
+      }
+    }
   }
 }
 
@@ -335,6 +343,13 @@ body {
   @include on-columns(6) {
     display: block;
     width: span(1 of 6);
+
+    .is-collage-activated & {
+      left: 120px;
+      right: 0;
+      z-index: 9999;
+      transform: rotate(0);
+    }
   };
 
   @include on-columns(7) {
@@ -359,6 +374,28 @@ body {
   @include on-columns(10) {
     width: span(3 of 10);
   };
+}
+
+.content__aside__collage {
+  img {
+    display: block;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: rgba(#6441A5, .925);
+  }
+
+  .is-activated &:before {
+    background: none;
+  }
 }
 
 .content__main__title {
@@ -391,6 +428,7 @@ body {
     font-size: 72px;
     padding-bottom: .1em;
     margin-bottom: .6em;
+    padding-top: .5em;
   }
 }
 

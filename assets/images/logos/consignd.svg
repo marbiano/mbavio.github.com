@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop" sketch:type="MSArtboardGroup" transform="translate(-380.000000, -707.000000)" fill="#000000">
+            <g id="Rectangle-2-Copy-+-Group" sketch:type="MSLayerGroup" transform="translate(280.000000, 639.000000)">
+                <g id="Group-Copy" transform="translate(100.000000, 68.000000)" sketch:type="MSShapeGroup">
+                    <g id="Group">
+                        <path d="M29.8631772,0 C13.5307622,0 0.289256198,13.241506 0.289256198,29.573921 C0.289256198,45.9081726 13.5307622,59.1478421 29.8631772,59.1478421 L55.2626263,59.1478421 C55.2626263,59.1478421 59.4352617,38.5307622 59.4352617,29.573921 C59.4352617,13.241506 46.1983471,0 29.8631772,0 L29.8631772,0 Z M29.8631772,47.3177227 C20.0642792,47.3177227 12.1193756,39.3774105 12.1193756,29.5730028 C12.1193756,19.7731864 20.0642792,11.8282828 29.8631772,11.8282828 C39.6657484,11.8282828 47.6060606,19.7731864 47.6060606,29.5730028 C47.6060606,39.3774105 39.6657484,47.3177227 29.8631772,47.3177227 L29.8631772,47.3177227 Z" id="Shape"></path>
+                        <ellipse id="Oval" cx="29.8631772" cy="29.573921" rx="5.91551882" ry="5.91551882"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
