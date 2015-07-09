@@ -482,8 +482,6 @@ body {
     left: calc(-100% + #{span(4 of 4 ($grid-column-width $grid-gutter-width) static) - gutter(4 ($grid-column-width $grid-gutter-width) static)});
   }
 
-  left: calc(100% - #{span(8 of 8 ($grid-column-width $grid-gutter-width) static)});
-
   @include on-columns(10) {
     left: -1 * span(1 of 4 wide);
   }
@@ -587,11 +585,13 @@ body {
 
   @include on-columns(9) {
     width: span(6 of 8);
+    position: relative;
+    left: calc(100% - #{span(8 of 8 ($grid-column-width $grid-gutter-width) static)});
   };
 
   @include on-columns(10) {
     max-width: span(6 of 9);
-    margin-left: span(1 of 9 wide);
+    left: span(1 of 9 wide);
   };
 }
 
@@ -630,8 +630,16 @@ body {
   &.is-worldly a {
     background-image: url('../img/logos/worldly.svg');
     background-repeat: no-repeat;
-    background-size: 130px 130px;
     background-position: center;
+    background-size: 43px 43px;
+
+    @include on-columns(4) {
+      background-size: 86px 86px;
+    };
+
+    @include on-columns(9) {
+      background-size: 130px 130px;
+    };
 
     &:hover {
       border-color: #ecd200;
@@ -641,8 +649,16 @@ body {
   &.is-thread-council a {
     background-image: url('../img/logos/thread_council.svg');
     background-repeat: no-repeat;
-    background-size: 130px 83px;
     background-position: center;
+    background-size: 43px 27.666px;
+
+    @include on-columns(4) {
+      background-size: 86px 55.333px;
+    };
+
+    @include on-columns(9) {
+      background-size: 130px 83px;
+    };
 
     &:hover {
       border-color: #000;
@@ -652,8 +668,12 @@ body {
   &.is-consignd a {
     background-image: url('../img/logos/consignd.svg');
     background-repeat: no-repeat;
-    background-size: 60px 60px;
     background-position: center;
+    background-size: 30px 30px;
+
+    @include on-columns(4) {
+      background-size: 60px 60px;
+    };
 
     &:hover {
       border-color: #000;
@@ -663,8 +683,12 @@ body {
   &.is-tanga a {
     background-image: url('../img/logos/tanga.svg');
     background-repeat: no-repeat;
-    background-size: 80px 61px;
     background-position: center;
+    background-size: 40px 30.5px;
+
+    @include on-columns(4) {
+      background-size: 80px 61px;
+    };
 
     &:hover {
       border-color: #37B6E3;
@@ -674,8 +698,12 @@ body {
   &.is-stayful a {
     background-image: url('../img/logos/stayful.svg');
     background-repeat: no-repeat;
-    background-size: 170px 17.5px;
     background-position: center;
+    background-size: 85px 8.75px;
+
+    @include on-columns(4) {
+      background-size: 170px 17.5px;
+    };
 
     &:hover {
       border-color: #000;
@@ -685,8 +713,12 @@ body {
   &.is-educabilia a {
     background-image: url('../img/logos/educabilia.svg');
     background-repeat: no-repeat;
-    background-size: 161px 40px;
     background-position: center;
+    background-size: 80.5px 20px;
+
+    @include on-columns(4) {
+      background-size: 161px 40px;
+    };
 
     &:hover {
       border-color: #c4d367;
@@ -696,8 +728,12 @@ body {
   &.is-wulia a {
     background-image: url('../img/logos/wulia.svg');
     background-repeat: no-repeat;
-    background-size: 75px 75px;
     background-position: center;
+    background-size: 37.5px 37.5px;
+
+    @include on-columns(4) {
+      background-size: 75px 75px;
+    };
 
     &:hover {
       border-color: #1593a5;
@@ -707,8 +743,12 @@ body {
   &.is-gamamia a {
     background-image: url('../img/logos/gamamia.svg');
     background-repeat: no-repeat;
-    background-size: 60px 60px;
     background-position: center;
+    background-size: 30px 30px;
+
+    @include on-columns(4) {
+      background-size: 60px 60px;
+    };
 
     &:hover {
       border-color: #fa5555;
@@ -756,8 +796,14 @@ body {
   text-transform: uppercase;
   font-size: 36px;
   line-height: 1;
+  margin-bottom: .25em;
 
   @include on-columns(4) {
+    font-size: 48px;
+    margin-bottom: .15em;
+  };
+
+  @include on-columns(6) {
     font-size: 60px;
   };
 }
@@ -767,6 +813,7 @@ body {
   font-size: 18px;
   line-height: 1.333;
   color: rgba(#000, .8);
+  margin-bottom: 2em;
 
   @include on-columns(4) {
     font-size: 20px;
@@ -777,4 +824,40 @@ body {
     font-size: 24px;
     line-height: 1.333;
   };
+}
+
+.works__footer {
+  clear: both;
+  overflow: auto;
+
+  @include on-columns(5) {
+    margin-right: $grid-margin-side;
+  };
+
+  @include on-columns(9) {
+    width: span(4 of 6);
+    margin-left: span(1 of 6 wide);
+  };
+}
+
+.works__footer__title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+
+  @include on-columns(6) {
+    font-size: 24px;
+    margin-top: 2.5em;
+  };
+}
+
+.works__footer__text {
+  font-family: "Benton Modern";
+  font-size: 18px;
+  line-height: 1.333;
+
+  a {
+    color: #6441A5;
+  }
 }
