@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll, dude"
+title:  "Welcome"
 subtitle: "Sometimes, you just need to stop."
 date:   2015-06-02 15:50:34
 tags: jekyll update

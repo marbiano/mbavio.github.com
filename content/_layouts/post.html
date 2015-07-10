@@ -5,10 +5,20 @@ layout: base
 <div class="content__main">
   <div class="post__date">{{ page.date | date: "%b %-d, %Y" }}</div>
   <div class="post__title">{{ page.title }}</div>
-  <div class="post__text">{{ content }}</div>
+  <div class="content__main__text">{{ content }}</div>
+  <div class="post__end">This post took 4 days to be completed and was published on July 9th, 2015.</div>
+  <div class="post__extra post__discuss">
+    <div class="post__extra__title">Discuss</div>
+    <ul>
+      <li class="post__discuss__item is-twitter"><a href="#">Twitter</a></li>
+      <li class="post__discuss__item is-facebook"><a href="#">Facebook</a></li>
+    </ul>
+  </div>
+  <div class="post__extra post__read-next">
+    <div class="post__extra__title">Read Next</div>
+    <div class="post__read-next__title"><a href="#">A New Story</a></div>
+  </div>
 </div>
 <div class="content__aside">
-  <div class="content__aside__collage">
-    <img src="/img/tc-works.jpg" />
-  </div>
+  <div class="post__image" style="background-image: url(https://static.pexels.com/photos/6807/sky-woman-clouds-sun.jpg)"></div>
 </div>
