@@ -899,4 +899,110 @@ body {
     font-size: 13px; }
   .blog__list__item__extra .is-tags {
     font-size: 14px; } }
+
+.post__date {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: .25em; }
+  @media (min-width: 1240px) {
+    .post__date {
+      font-size: 13px; } }
+
+.post__title {
+  font-family: "klavika-web-display";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1.333;
+  margin-bottom: .75em; }
+  @media (min-width: 540px) {
+    .post__title {
+      font-size: 48px; } }
+  @media (min-width: 820px) {
+    .post__title {
+      font-size: 60px; } }
+
+.post__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center; }
+
+.post__end {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 5em;
+  padding-bottom: 4.5em;
+  position: relative; }
+  .post__end:before {
+    content: '';
+    display: block;
+    font-size: 13px;
+    position: absolute;
+    bottom: .5em;
+    left: 25%;
+    right: 25%;
+    border-top: 1px solid rgba(0, 0, 0, 0.15); }
+  .post__end:after {
+    content: 'x';
+    display: block;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5em;
+    color: rgba(0, 0, 0, 0.25);
+    padding: 0 1em;
+    background: #fff; }
+
+.post__extra {
+  text-align: center;
+  margin-top: 2.5em; }
+
+.post__extra__title {
+  font-size: 13px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 1em; }
+
+.post__read-next__title {
+  font-weight: 900;
+  font-size: 23px; }
+  .post__read-next__title a {
+    color: #000;
+    text-decoration: none; }
+    .post__read-next__title a:hover {
+      color: #6441A5; }
+
+.post__discuss__item {
+  display: inline-block;
+  vertical-align: middle; }
+  .post__discuss__item:not(:last-child) {
+    margin-right: .5em; }
+  .post__discuss__item.is-twitter a {
+    font-size: 0;
+    text-decoration: none;
+    display: block;
+    width: 25px;
+    height: 20px;
+    background-image: url("../img/icons/twitter-filled.svg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .post__discuss__item.is-facebook a {
+    font-size: 0;
+    text-decoration: none;
+    display: block;
+    width: 12px;
+    height: 23px;
+    background-image: url("../img/icons/facebook-filled.svg");
+    background-repeat: no-repeat;
+    background-size: cover; }
 /*# sourceMappingURL=martinbavio.css.map */
