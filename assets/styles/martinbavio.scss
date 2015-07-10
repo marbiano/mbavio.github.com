@@ -59,6 +59,7 @@ body {
 
 .container {
   @include container;
+  min-height: 100vh;
   margin-left: $grid-margin-side;
   margin-right: $grid-margin-side;
 
@@ -425,7 +426,7 @@ body {
   };
 
   @include on-columns(6) {
-    font-size: 72px;
+    font-size: 70px;
     padding-bottom: .1em;
     margin-bottom: .6em;
     padding-top: .5em;
@@ -566,6 +567,8 @@ body {
 }
 
 .works {
+  overflow: auto;
+
   @include on-columns(5, false) {
     width: span(4 of 4);
     margin-right: $grid-margin-side;
@@ -797,6 +800,7 @@ body {
   font-size: 36px;
   line-height: 1;
   margin-bottom: .25em;
+  margin-top: .25em;
 
   @include on-columns(4) {
     font-size: 48px;
@@ -805,6 +809,7 @@ body {
 
   @include on-columns(6) {
     font-size: 60px;
+    margin-top: .5em;
   };
 }
 
@@ -824,13 +829,17 @@ body {
     font-size: 24px;
     line-height: 1.333;
   };
+
+  @include on-columns(9) {
+    margin-bottom: 3.5em;
+  }
 }
 
 .works__footer {
   clear: both;
   overflow: auto;
 
-  @include on-columns(5) {
+  @include on-columns(5, false) {
     margin-right: $grid-margin-side;
   };
 
@@ -859,5 +868,101 @@ body {
 
   a {
     color: #6441A5;
+  }
+}
+
+.blog__list {
+  @include on-columns(5, false) {
+    margin-right: $grid-margin-side;
+  }
+}
+
+.blog__list__item {
+  @include clearfix;
+
+  &:not(:last-child) {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgba(#000, .07);
+  }
+}
+
+.blog__list__item__main {
+  .is-title {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: .25em;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        color: #6441A5;
+      }
+    }
+  }
+
+  .is-subtitle {
+    font-family: "Benton Modern";
+    color: rgba(#000, .6);
+    margin-bottom: .5em;
+  }
+
+  @include on-columns(4) {
+    float: left;
+    width: auto;
+
+    .is-subtitle {
+      margin-bottom: 0;
+    }
+  }
+
+  @include on-columns(9) {
+    .is-title {
+      font-size: 23px;
+    }
+
+    .is-subtitle {
+      font-size: 18px;
+    }
+  }
+}
+
+.blog__list__item__extra {
+  .is-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(#000, .4);
+    margin-bottom: .25em;
+  }
+
+  .is-tags {
+    font-size: 13px;
+
+    a {
+      color: rgba(#000, .3);
+    }
+  }
+
+  @include on-columns(4) {
+    float: right;
+    width: auto;
+    text-align: right;
+
+    .is-date {
+      margin-bottom: .5em;
+    }
+  }
+
+  @include on-columns(9) {
+    .is-date {
+      font-size: 13px;
+    }
+
+    .is-tags {
+      font-size: 14px;
+    }
   }
 }
