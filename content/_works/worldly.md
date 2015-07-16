@@ -4,6 +4,7 @@ intro: "Worldly is...."
 client: "Worldly"
 position: "Lead UI Designer"
 date: "Jul 2014 - Jun 2015"
+body_class: "p-worldly"
 ---
 
 ## Why did it matter?

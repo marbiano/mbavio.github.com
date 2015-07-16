@@ -4,6 +4,7 @@ intro: "Educabilia is...."
 client: "Educabilia"
 position: "UI Designer"
 date: "Sept 2012 - Dec 2012"
+body_class: "p-educabilia"
 ---
 
 ## Why did it matter?

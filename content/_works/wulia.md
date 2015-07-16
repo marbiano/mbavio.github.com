@@ -4,6 +4,7 @@ intro: "Wulia is...."
 client: "Wulia"
 position: "UI Designer & Event Planner"
 date: "Mar 2012 - Sep 2012"
+body_class: "p-wulia"
 ---
 
 ## Why did it matter?

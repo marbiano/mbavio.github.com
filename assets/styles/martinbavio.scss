@@ -348,6 +348,7 @@ body {
     .is-collage-activated & {
       left: 120px;
       right: 0;
+      width: auto;
       z-index: 9999;
       transform: rotate(0);
     }
@@ -378,6 +379,15 @@ body {
 }
 
 .content__aside__collage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   img {
     display: block;
   }
@@ -394,7 +404,7 @@ body {
     background: rgba(#6441A5, .925);
   }
 
-  .is-activated &:before {
+  .is-collage-activated &:before {
     background: none;
   }
 }
@@ -408,15 +418,49 @@ body {
   padding-bottom: .3em;
   margin-bottom: 1.25em;
   position: relative;
+  color: #000;
 
   &:after {
     content: '';
     width: 1.75em;
     height: 0;
-    border-bottom: 5px solid #ecd200;
+    border-width: 4px;
+    border-style: solid;
     position: absolute;
     bottom: 0;
     left: 0;
+
+    .p-worldly & {
+      border-color: #ecd200;
+    }
+
+    .p-thread-council & {
+      border-color: #000;
+    }
+
+    .p-consignd & {
+      border-color: #000;
+    }
+
+    .p-educabilia & {
+      border-color: #c4d367;
+    }
+
+    .p-stayful & {
+      border-color: #000;
+    }
+
+    .p-tanga & {
+      border-color: #37b6e3;
+    }
+
+    .p-wulia & {
+      border-color: #1593a5;
+    }
+
+    .p-gamamia & {
+      border-color: #fa5555;
+    }
   }
 
   @include on-columns(4) {

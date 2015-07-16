@@ -4,6 +4,7 @@ intro: "Thread Council is...."
 client: "Thread Council"
 position: "Lead UI Designer"
 date: "Jan 2013 - Aug 2013"
+body_class: "p-thread-council"
 ---
 
 ## Why did it matter?

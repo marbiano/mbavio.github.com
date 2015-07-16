@@ -4,6 +4,7 @@ intro: "Tanga is...."
 client: "Tanga"
 position: "Front-End Engineer"
 date: "Jul 2013 - Jul 2014"
+body_class: "p-tanga"
 ---
 
 ## Why did it matter?

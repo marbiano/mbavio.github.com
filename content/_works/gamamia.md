@@ -4,6 +4,7 @@ intro: "Gamamia is...."
 client: "Gamamia"
 position: "UI Designer"
 date: "Feb 2015"
+body_class: "p-gamamia"
 ---
 
 ## Why did it matter?

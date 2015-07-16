@@ -4,6 +4,7 @@ intro: "Consignd is...."
 client: "Consignd"
 position: "UI Designer & Front-End Dev"
 date: "Sept 2013 - Nov 2013"
+body_class: "p-consignd"
 ---
 
 ## Why did it matter?
