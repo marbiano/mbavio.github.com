@@ -403,6 +403,7 @@ body {
       .is-collage-activated .content__aside {
         left: 120px;
         right: 0;
+        width: auto;
         z-index: 9999;
         -webkit-transform: rotate(0);
                 transform: rotate(0); } }
@@ -428,22 +429,29 @@ body {
     .content__aside {
       width: 28.9855072464%; } }
 
-.content__aside__collage img {
-  display: block; }
-
-.content__aside__collage:before {
-  content: '';
-  display: block;
+.content__aside__collage {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 5;
-  background: rgba(100, 65, 165, 0.925); }
-
-.is-activated .content__aside__collage:before {
-  background: none; }
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .content__aside__collage img {
+    display: block; }
+  .content__aside__collage:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: rgba(100, 65, 165, 0.925); }
+  .is-collage-activated .content__aside__collage:before {
+    background: none; }
 
 .content__main__title {
   font-family: "klavika-web-display";
@@ -453,15 +461,33 @@ body {
   line-height: 1.5;
   padding-bottom: .3em;
   margin-bottom: 1.25em;
-  position: relative; }
+  position: relative;
+  color: #000; }
   .content__main__title:after {
     content: '';
-    width: 1.75em;
+    width: 1.5em;
     height: 0;
-    border-bottom: 5px solid #ecd200;
+    border-width: 4px;
+    border-style: solid;
     position: absolute;
     bottom: 0;
     left: 0; }
+    .p-worldly .content__main__title:after {
+      border-color: #ecd200; }
+    .p-thread-council .content__main__title:after {
+      border-color: #000; }
+    .p-consignd .content__main__title:after {
+      border-color: #000; }
+    .p-educabilia .content__main__title:after {
+      border-color: #c4d367; }
+    .p-stayful .content__main__title:after {
+      border-color: #000; }
+    .p-tanga .content__main__title:after {
+      border-color: #37b6e3; }
+    .p-wulia .content__main__title:after {
+      border-color: #1593a5; }
+    .p-gamamia .content__main__title:after {
+      border-color: #fa5555; }
   @media (min-width: 540px) {
     .content__main__title {
       font-size: 60px;
