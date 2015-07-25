@@ -1,0 +1,42 @@
+$grid-column-count: 2;
+$grid-column-width: 120px;
+$grid-gutter-width: 20px;
+$grid-margin-side: 30px;
+
+@function calculate-bp ($columns) {
+  @return $columns * $grid-column-width + ($columns - 1) * $grid-gutter-width;
+};
+
+$grid-column-sizes: (
+  4: calculate-bp(4),
+  5: calculate-bp(5),
+  6: calculate-bp(6),
+  7: calculate-bp(7),
+  8: calculate-bp(8),
+  9: calculate-bp(9),
+  10: calculate-bp(10)
+);
+
+$susy: (
+  math: fluid,
+  columns: $grid-column-count,
+  column-width: false,
+  gutters: $grid-gutter-width / $grid-column-width,
+  container-position: center,
+  global-box-sizing: border-box,
+  debug: (image: hide)
+);
+
+@mixin on-columns($number-of-columns, $spread: true) {
+  @each $cols in $number-of-columns {
+    @if $spread == true {
+      @include susy-breakpoint(map-get($grid-column-sizes, $cols), $cols) {
+        @content;
+      }
+    } @else {
+      @include susy-breakpoint(map-get($grid-column-sizes, $cols) map-get($grid-column-sizes, $cols + 1), $cols) {
+        @content;
+      }
+    }
+  }
+};

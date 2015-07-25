@@ -4,7 +4,7 @@ intro: "Thread Council had a noble mission: to free amazing artists from the cli
 client: "Thread Council"
 position: "Lead UI Designer"
 date: "Jan 2013 - Aug 2013"
-body_class: "p-thread-council"
+body_class: "w-thread-council"
 ---
 
 ## Why did it matter?
@@ -12,8 +12,6 @@ body_class: "p-thread-council"
 Because there are thousand of amazing creative minds trapped into the corporate world. So a platform to free some of them and allow them to work on their own ideas and wishes, was a concept I was in love right from the first pitch. It was like The Matrix for artists, you know?
 
 ## What did I do?
-
-### Early Days
 
 I was reached by Thread Council’s team in order to work on the planning, design and implementation of their digital product.
 

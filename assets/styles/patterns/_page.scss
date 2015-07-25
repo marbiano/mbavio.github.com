@@ -1,0 +1,261 @@
+.page {
+  padding-top: 60px;
+
+  @include on-columns(5) {
+    padding-top: 120px;
+  }
+}
+
+.page__simple {
+  margin-top: 30px;
+
+  @include on-columns(5 6) {
+    margin-left: span(1 wide);
+    margin-right: $grid-margin-side;
+    margin-top: .5em;
+  }
+
+  @include on-columns(7) {
+    width: span(5);
+    margin-left: span(1 wide);
+    margin-right: auto;
+  }
+
+
+
+  @include on-columns(8 9) {
+    width: span(6);
+    margin-left: span(1 wide);
+    margin-top: 4em;
+  }
+
+  @include on-columns(10) {
+    margin-left: span(2 wide);
+    margin-right: auto;
+  }
+}
+
+.page__main {
+  margin-top: 30px;
+
+  @include on-columns(5) {
+    max-width: span(4);
+    margin-left: span(1 wide);
+    margin-right: $grid-margin-side;
+    margin-top: 0;
+  }
+
+  @include on-columns(6) {
+    max-width: span(4);
+    margin-left: span(1 wide);
+    margin-right: 0;
+  }
+
+  @include on-columns(7 8) {
+    max-width: span(4);
+    margin-left: span(1 wide);
+  }
+
+  @include on-columns(9 10) {
+    max-width: span(4);
+    margin-left: span(1 wide);
+    margin-top: 4em;
+  }
+}
+
+.page__aside {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: $color-brand;
+
+  @include on-columns(6) {
+    display: block;
+    width: span(1);
+
+    .is-aside-activated & {
+      left: 120px;
+      right: 0;
+      width: auto;
+      z-index: 9999;
+      transform: rotate(0);
+    }
+  }
+
+  @include on-columns(7) {
+    width: span(2);
+    box-sizing: content-box;
+    transform: rotate(-2deg);
+    transform-origin: left bottom;
+    top: -50px;
+    bottom: -50px;
+    right: -50px;
+    padding-right: 50px;
+  }
+
+  @include on-columns(8) {
+    width: span(2);
+  }
+
+  @include on-columns(9 10) {
+    width: span(3);
+  }
+}
+
+.page__text {
+  font-family: $font-serif;
+  color: rgba($color-black, .8);
+  font-size: em(17px, $font-size-base);
+
+  &.is-light {
+    color: rgba($color-black, .5);
+  }
+
+  @include on-columns(9) {
+    font-size: em(18px, $font-size-base);
+  }
+}
+
+.page__meta {
+  font-family: $font-sans-serif;
+  font-size: em(14px, $font-size-base);
+
+  &.is-s {
+    font-size: em(12px, $font-size-base);
+  }
+
+  a {
+    color: rgba($color-black, .3);
+
+    &:hover {
+      color: $color-brand;
+    }
+  }
+}
+
+.page__small {
+  font-family: $font-sans-serif;
+  font-size: em(12px, $font-size-base);
+  color: rgba($color-black, .5);
+}
+
+.page__intro {
+  font-family: $font-serif-display;
+  font-size: em(18px, $font-size-base);
+  color: rgba($color-black, .9);
+  margin-bottom: 2em;
+
+  @include on-columns(5) {
+    font-size: em(21px, $font-size-base);
+  }
+
+  @include on-columns(9) {
+    font-size: em(24px, $font-size-base);
+  }
+}
+
+.page__date {
+  font-family: $font-sans-serif;
+  font-size: em(12px, $font-size-base);
+  color: rgba($color-black, .4);
+  text-transform: uppercase;
+  letter-spacing: em(2px, 12px);
+
+  @include on-columns(9) {
+    font-size: em(13px, $font-size-base);
+    letter-spacing: em(2px, 13px);
+  }
+}
+
+.page__title {
+  font-family: $font-display;
+  font-weight: 900;
+  line-height: 1;
+  color: $color-black;
+  text-transform: uppercase;
+  font-size: em(23px, $font-size-base);
+
+  @include on-columns(9) {
+    font-size: em(27px, $font-size-base);
+  }
+
+  &.is-l {
+    font-size: em(27px, $font-size-base);
+
+    @include on-columns(9) {
+      font-size: em(44px, $font-size-base);
+    }
+  }
+
+  &.is-xl {
+    font-size: 44px;
+
+    @include on-columns(9) {
+      font-size: em(60px, $font-size-base);
+    }
+  }
+
+  a {
+    color: $color-black;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-brand;
+    }
+  }
+}
+
+.page__quote {
+  font-family: $font-serif-display;
+  font-size: em(30px, $font-size-base);
+  color: $color-black;
+}
+
+.page__quote__text {
+  font-family: $font-serif;
+  font-size: em(18px, 30px);
+  color: rgba($color-black, .6);
+}
+
+.page__aside__media {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  img {
+    display: block;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: rgba($color-brand, .925);
+  }
+
+  .is-aside-activated &:before {
+    display: none;
+  }
+
+  &.is-static {
+    &:before {
+      display: none;
+    }
+  }
+
+  &.is-centered {
+    background-position: center;
+  }
+}

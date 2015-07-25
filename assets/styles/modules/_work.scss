@@ -1,0 +1,273 @@
+.works__title {
+  font-family: "klavika-web-display";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: .25em;
+  margin-top: .25em;
+
+  @include on-columns(4) {
+    font-size: 48px;
+    margin-bottom: .15em;
+  };
+
+  @include on-columns(6) {
+    font-size: 60px;
+    margin-top: .5em;
+  };
+}
+
+.works__subtitle {
+  font-family: "Benton Modern";
+  font-size: 18px;
+  line-height: 1.333;
+  color: rgba(#000, .8);
+  margin-bottom: 2em;
+
+  @include on-columns(4) {
+    font-size: 20px;
+  };
+
+  @include on-columns(6) {
+    font-family: BentonModernDisp;
+    font-size: 24px;
+    line-height: 1.333;
+  };
+
+  @include on-columns(9) {
+    margin-bottom: 3.5em;
+  }
+}
+
+.works__footer {
+  clear: both;
+  overflow: auto;
+
+  @include on-columns(5, false) {
+    margin-right: $grid-margin-side;
+  };
+
+  @include on-columns(9) {
+    width: span(4 of 6);
+    margin-left: span(1 of 6 wide);
+  };
+}
+
+.works__footer__title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+
+  @include on-columns(6) {
+    font-size: 24px;
+    margin-top: 2.5em;
+  };
+}
+
+.works__footer__text {
+  font-family: "Benton Modern";
+  font-size: 18px;
+  line-height: 1.333;
+
+  a {
+    color: #6441A5;
+  }
+}
+
+.works__posts__item {
+  margin-bottom: 5em;
+  padding-bottom: 5em;
+  border-bottom: 1px solid rgba(#000, .07);
+}
+
+.work__title {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1.5em;
+
+  span {
+    display: none;
+  }
+
+  .w-worldly & {
+    width: 124px;
+    height: 124px;
+    background-image: url('../img/logos/worldly.svg');
+  }
+
+  .w-thread-council & {
+    width: 157px;
+    height: 100px;
+    background-image: url('../img/logos/thread_council.svg');
+  }
+
+  .w-consignd & {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/logos/consignd.svg');
+  }
+
+  .w-tanga & {
+    width: 133px;
+    height: 100px;
+    background-image: url('../img/logos/tanga.svg');
+  }
+
+  .w-stayful & {
+    width: 378px;
+    height: 40px;
+    background-image: url('../img/logos/stayful.svg');
+  }
+
+  .w-educabilia & {
+    width: 321px;
+    height: 80px;
+    background-image: url('../img/logos/educabilia.svg');
+  }
+
+  .w-wulia & {
+    width: 124px;
+    height: 124px;
+    background-image: url('../img/logos/wulia.svg');
+  }
+
+  .w-gamamia & {
+    width: 110px;
+    height: 110px;
+    background-image: url('../img/logos/gamamia.svg');
+  }
+}
+
+.work__meta {
+  @include on-columns(6) {
+    width: span(4.5 of 4);
+    position: relative;
+    left: -1 * gutter(4);
+    z-index: 10;
+  }
+
+  @include on-columns(7) {
+    transform: skewX(4deg);
+    overflow: hidden;
+    margin-left: -10px;
+  }
+
+  @include on-columns(8) {
+    width: span(5.5 of 4);
+  }
+}
+
+.work__meta__inner {
+  background: $color-brand-dark;
+  position: relative;
+  z-index: 10;
+  margin: 0 (-$grid-margin-side);
+  padding: $grid-margin-side;
+
+  @include on-columns(5) {
+    @include clearfix;
+    margin-left: 0;
+    margin-right: 0;
+  };
+
+   @include on-columns(7) {
+    transform: skewX(-4deg);
+    width: 100%;
+    margin-left: 10px;
+  };
+
+  @include on-columns(10) {
+    margin-left: -1 * span(1 of 4 wide);
+  };
+}
+
+.work__meta__item {
+  @include clearfix;
+  font-size: 14px;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(#fff, .075);
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  @include on-columns(6) {
+    @include span(1 of 3);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+
+    &:last-child {
+      @include last;
+    }
+  }
+}
+
+.work__meta__item__title {
+  @include span(1 of 2);
+  color: rgba($color-white, .5);
+  line-height: 1;
+
+  @include on-columns(6) {
+    display: block;
+    float: none;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: .75em;
+  }
+}
+
+.work__meta__item__text {
+  @include span(1 of 2 last);
+  color: $color-white;
+  line-height: 1;
+
+  @include on-columns(6) {
+    display: block;
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.work__text {
+  margin-top: 3em;
+
+  h2 {
+    font-family: $font-display;
+    font-weight: 900;
+    line-height: 1;
+    color: $color-black;
+    text-transform: uppercase;
+    font-size: em(23px, 17px);
+    margin: 1.75em 0 .5em;
+
+    @include on-columns(9) {
+      font-size: em(27px, 18px);
+    }
+  }
+
+  h3 {
+    font-family: $font-sans-serif;
+    text-transform: uppercase;
+    font-size: em(13px, 17px);
+    letter-spacing: em(2px, 13px);
+    color: $color-black;
+    margin: 2.5em 0 .75em;
+
+    @include on-columns(9) {
+      font-size: em(14px, 18px);
+      letter-spacing: em(2px, 14px);
+    }
+  }
+
+  p {
+    margin-bottom: 1.333em;
+  }
+}

@@ -4,7 +4,7 @@ intro: "Wulia is a proyect from me and a couple of local friends, trying to conn
 client: "Wulia"
 position: "UI Designer & Event Planner"
 date: "Mar 2012 - Sep 2012"
-body_class: "p-wulia"
+body_class: "w-wulia"
 ---
 
 This content is beeing created. Please come back later this week or check the changelow for updates!

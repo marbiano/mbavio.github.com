@@ -10,7 +10,9 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
-permalink: "/writing/:title"
+paginate: 10
+paginate_path: "/journal/page/:num/"
+permalink: "/journal/:title"
 
 # Build settings
 markdown: kramdown
@@ -18,7 +20,10 @@ markdown: kramdown
 collections:
   works:
     output: true
-    permalink: /works/:path/
+    permalink: /work/:path/
+  writings:
+    output: true
+    permalink: /writing/:path/
 
 defaults:
   -
@@ -27,3 +32,9 @@ defaults:
       type: works
     values:
       layout: work
+  -
+    scope:
+      path: ""
+      type: writings
+    values:
+      layout: writing

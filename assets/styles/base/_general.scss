@@ -1,0 +1,27 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-sans-serif;
+  font-size: $font-size-base;
+  line-height: $font-line-height-base;
+  @include smooth-text;
+}
+
+.container {
+  @include container;
+  min-height: 100vh;
+  margin-left: $grid-margin-side;
+  margin-right: $grid-margin-side;
+
+  @include on-columns(4, false) {
+    @include container;
+    margin-left: $grid-margin-side;
+    margin-right: $grid-margin-side;
+  }
+
+  @include on-columns(5 6 7 8 9 10) {
+    @include container;
+  }
+}

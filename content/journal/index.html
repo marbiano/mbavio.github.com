@@ -1,0 +1,32 @@
+---
+layout: base
+title: "Journal"
+---
+
+<div class="page__simple">
+
+  <div class="page__intro">Things that crosses my path and deserves to be shared.</div>
+  <ul class="journal-list">
+    {% for post in paginator.posts %}
+      <li class="journal-list__item">
+        {% include post.html post=post %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <div class="journal-list__pagination">
+      {% if paginator.previous_page %}
+        <a rel="prev" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
+      {% else %}
+        <span>Previous</span>
+      {% endif %}
+      <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+      {% else %}
+        <span>Next</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

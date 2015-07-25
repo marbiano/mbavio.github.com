@@ -1,31 +1,29 @@
 ---
 layout: base
 ---
-<div class="content__main">
-  <h1 class="content__main__title">{{ page.title }}</h1>
-  <p class="content__main__intro">{{ page.intro }}</p>
-  <div class="content__main__meta__wrapper">
-    <div class="content__main__meta">
-      <div class="is-inner">
-        <ul>
-          <li class="content__main__meta__item">
-            <div class="is-label">Client</div>
-            <div class="is-definition">{{ page.client }}</div>
-          </li>
-          <li class="content__main__meta__item">
-            <div class="is-label">Position</div>
-            <div class="is-definition">{{ page.position }}</div>
-          </li>
-          <li class="content__main__meta__item">
-            <div class="is-label">Date</div>
-            <div class="is-definition">{{ page.date }}</div>
-          </li>
-        </ul>
-      </div>
+<div class="page__main">
+  <h1 class="page__title work__title"><span>{{ page.title }}</span></h1>
+  <p class="page__intro work__intro">{{ page.intro }}</p>
+  <div class="work__meta">
+    <div class="work__meta__inner">
+      <ul>
+        <li class="work__meta__item">
+          <div class="extra__title is-s work__meta__item__title">Client</div>
+          <div class="extra__text work__meta__item__text">{{ page.client }}</div>
+        </li>
+        <li class="work__meta__item">
+          <div class="extra__title is-s work__meta__item__title">Position</div>
+          <div class="extra__text work__meta__item__text">{{ page.position }}</div>
+        </li>
+        <li class="work__meta__item">
+          <div class="extra__title is-s work__meta__item__title">Date</div>
+          <div class="extra__text work__meta__item__text">{{ page.date }}</div>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="content__main__text">{{ content }}</div>
+  <div class="page__text work__text">{{ content }}</div>
 </div>
-<div class="content__aside">
-  <div class="content__aside__collage" style="background-image: url(/img/collages/{{ page.client | downcase | replace:' ','-' }}.jpg)"></div>
+<div class="page__aside">
+  <div class="page__aside__media" style="background-image: url(/img/collages/{{ page.client | downcase | replace:' ','-' }}.jpg)"></div>
 </div>

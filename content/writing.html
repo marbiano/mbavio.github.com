@@ -1,0 +1,26 @@
+---
+layout: base
+title: "My Thoughts"
+permalink: /writing/
+---
+<div class="page__simple">
+  <div class="page__intro">I have an unsettling mind. Sometimes, writing helps me calm it.</div>
+  <ul class="writing-list">
+    {% for writing in site.writings %}
+      <li class="writing-list__item">
+        <div class="writing-list__item__main">
+          <div class="page__title"><a href="{{ writing.url }}">{{ writing.title }}</a></div>
+          <div class="page__text is-light">{{ writing.subtitle }}</div>
+        </div>
+        <div class="writing-list__item__extra">
+          <div class="page__date writing-list__item__date">{{ writing.date | date: "%b %-d, %Y" }}</div>
+          <div class="page__meta">
+            {% for tag in writing.tags %}
+              <a href="#">{{tag | capitalize}}</a>{% if forloop.last == false %},{% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -20,7 +20,7 @@
   <div class="container">
     <div class="header">
       <div class="header__brand">
-        <div class="header__brand__logo"><a href="#">Site</a></div>
+        <div class="header__brand__logo"><a href="{{ site.baseurl }}/">Site</a></div>
         <nav class="header__brand__social">
           <ul>
             <li class="header__brand__social__item is-email"><a href="mailto:mbavio@gmail.com">Email</a></li>
@@ -33,13 +33,15 @@
       </div>
       <nav class="header__nav">
         <ul>
-          <li class="header__nav__item"><a href="{{ "/works" | prepend: site.baseurl }}">Works</a></li>
-          <li class="header__nav__item"><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
-          <li class="header__nav__item"><a href="{{ "/writing" | prepend: site.baseurl }}">Writing</a></li>
+          {% assign pageUrl = page.url | split: '/' %}
+          <li class="header__nav__item nav__item {% if pageUrl[1] == 'about' %}is-active{% endif %}"><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
+          <li class="header__nav__item nav__item {% if pageUrl[1] == 'work' %}is-active{% endif %}"><a href="{{ "/work" | prepend: site.baseurl }}">Work</a></li>
+          <li class="header__nav__item nav__item {% if pageUrl[1] == 'writing' %}is-active{% endif %}"><a href="{{ "/writing" | prepend: site.baseurl }}">Writing</a></li>
+          <li class="header__nav__item nav__item {% if pageUrl[1] == 'journal' %}is-active{% endif %}"><a href="{{ "/journal" | prepend: site.baseurl }}">Journal</a></li>
         </ul>
       </nav>
     </div>
-    <div class="content">
+    <div class="page">
       {{ content }}
     </div>
   </div>

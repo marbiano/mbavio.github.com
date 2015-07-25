@@ -1,0 +1,188 @@
+.work-list {
+  @include clearfix;
+}
+
+.work-list__item {
+  @include span(1 of 2);
+  margin-bottom: gutter(2);
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba($color-black, .05);
+    border-radius: 3px;
+    font-size: 0;
+  }
+
+  &.is-worldly a {
+    background-image: url('../img/logos/worldly.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 43px 43px;
+
+    @include on-columns(4) {
+      background-size: 86px 86px;
+    };
+
+    @include on-columns(9) {
+      background-size: 130px 130px;
+    };
+
+    &:hover {
+      border-color: $color-worldly;
+    }
+  }
+
+  &.is-thread-council a {
+    background-image: url('../img/logos/thread_council.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 43px 27.666px;
+
+    @include on-columns(4) {
+      background-size: 86px 55.333px;
+    };
+
+    @include on-columns(9) {
+      background-size: 130px 83px;
+    };
+
+    &:hover {
+      border-color: $color-thread-council;
+    }
+  }
+
+  &.is-consignd a {
+    background-image: url('../img/logos/consignd.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+
+    @include on-columns(4) {
+      background-size: 60px 60px;
+    };
+
+    &:hover {
+      border-color: $color-consignd;
+    }
+  }
+
+  &.is-tanga a {
+    background-image: url('../img/logos/tanga.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px 30.5px;
+
+    @include on-columns(4) {
+      background-size: 80px 61px;
+    };
+
+    &:hover {
+      border-color: $color-tanga;
+    }
+  }
+
+  &.is-stayful a {
+    background-image: url('../img/logos/stayful.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85px 8.75px;
+
+    @include on-columns(4) {
+      background-size: 170px 17.5px;
+    };
+
+    &:hover {
+      border-color: $color-stayful;
+    }
+  }
+
+  &.is-educabilia a {
+    background-image: url('../img/logos/educabilia.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80.5px 20px;
+
+    @include on-columns(4) {
+      background-size: 161px 40px;
+    };
+
+    &:hover {
+      border-color: $color-educabilia;
+    }
+  }
+
+  &.is-wulia a {
+    background-image: url('../img/logos/wulia.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 37.5px 37.5px;
+
+    @include on-columns(4) {
+      background-size: 75px 75px;
+    };
+
+    &:hover {
+      border-color: $color-wulia;
+    }
+  }
+
+  &.is-gamamia a {
+    background-image: url('../img/logos/gamamia.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+
+    @include on-columns(4) {
+      background-size: 60px 60px;
+    };
+
+    &:hover {
+      border-color: $color-gamamia;
+    }
+  }
+
+  &:nth-child(2n) {
+    @include last;
+  }
+
+  @include on-columns(5) {
+    @include span(2 of 4);
+    margin-bottom: gutter(4);
+
+    &:nth-child(2n) {
+      @include last;
+    }
+  }
+
+  @include on-columns(9) {
+    @include span(2 of 6);
+    margin-bottom: gutter(6);
+
+    &:nth-child(2n) {
+      @include span(2 of 6);
+    }
+
+    &:nth-child(3n + 2) {
+      @include last;
+    }
+
+    &:nth-child(1) {
+      @include span(3 of 6);
+    }
+
+    &:nth-child(2) {
+      @include span(3 of 6 last);
+    }
+  };
+}

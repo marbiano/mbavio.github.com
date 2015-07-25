@@ -1,0 +1,12 @@
+$font-serif:            'Benton Modern', Georgia, Times, "Times New Roman", serif;
+$font-serif-display:    BentonModernDisp, Georgia, Times, "Times New Roman", serif;
+$font-sans-serif:       'Benton Sans', Helvetica, Arial, sans-serif;
+$font-display:          'klavika-web-display', Helvetica, Arial, sans-serif;
+
+$font-size-base:        14px;
+$font-line-height-base: 1.5;
+
+@mixin smooth-text() {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(#000, 0.004);
+}

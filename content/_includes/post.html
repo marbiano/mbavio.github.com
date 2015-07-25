@@ -1,0 +1,33 @@
+<div class="post
+  {% if include.post.media != null %}is-{{include.post.media}}{% endif %}
+  {% if include.post.media_position != null %}is-{{include.post.media_position}}{% else %}is-top{% endif %}
+  {% if include-post.media == 'images' %}is-count-{{include.post.images.size}}{% endif %}">
+  {% if include.post.media != null %}
+    <div class="post__media">
+      {% if include.post.media == 'vimeo' %}
+        <iframe src="https://player.vimeo.com/video/{{include.post.video_id}}?title=0&byline=0&portrait=0" width="847" height="477" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% elsif include.post.media == 'youtube' %}
+        <iframe width="847" height="477" src="https://www.youtube.com/embed/{{include.post.video_id}}?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      {% elsif include.post.media == 'images' %}
+        {% for image in include.post.images %}
+          <img src="{{ image }}" />
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="post__content">
+    <div class="post__content__meta">
+      <div class="page__title">{{ include.post.title }}</div>
+      <div class="page__date">{{ include.post.date | date: "%b %-d, %Y" }}</div>
+    </div>
+    <div class="post__content__text page__text">
+      {{ include.post.content }}
+    </div>
+    <div class="post__content__share">
+      <ul>
+        <li class="post__content__share__item is-twitter"><a href="#">On Twitter</a></li>
+        <li class="post__content__share__item is-facebook"><a href="#">On Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.home-logo {
+  width: 99px;
+  height: 92.5px;
+  background-image: url('../img/new_logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: span(1 of 12 wide);
+  margin-left: span(1 of 12 wide);
+
+  span {
+    display: none;
+  }
+}
+
+.home-list {
+  margin-top: span(1 of 12 wide) / 2;
+  margin-left: span(1 of 12 wide);
+}
+
+.home-list__item {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: em(2px, 16px);
+  font-size: em(16px, $font-size-base);
+
+  &:not(:last-child) {
+    margin-right: 3em;
+  }
+
+  a {
+    color: rgba($color-black, .5);
+    text-decoration: none;
+
+    &:hover {
+      background: $color-brand;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.extra__text {
+  font-family: $font-sans-serif;
+  font-size: em(13px, $font-size-base);
+
+  @include on-columns(9) {
+    font-size: em(14px, $font-size-base);
+  }
+}
+
+.extra__title {
+  font-family: $font-sans-serif;
+  color: rgba($color-black, .4);
+  font-size: em(12px, $font-size-base);
+  letter-spacing: em(2px, 12px);
+  text-transform: uppercase;
+
+  @include on-columns(9) {
+    font-size: em(13px, $font-size-base);
+    letter-spacing: em(2px, 13px);
+  }
+
+  &.is-s {
+    font-size: em(11px, $font-size-base);
+    letter-spacing: em(2px, 11px);
+
+    @include on-columns(9) {
+      font-size: em(12px, $font-size-base);
+      letter-spacing: em(2px, 12px);
+    }
+  }
+}

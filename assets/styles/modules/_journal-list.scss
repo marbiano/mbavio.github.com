@@ -1,0 +1,17 @@
+.journal-list__item {
+  &:not(:last-child) {
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid rgba($color-black, .07);
+
+    @include on-columns(5) {
+      margin-bottom: 4em;
+      padding-bottom: 4em;
+    }
+
+    @include on-columns(9) {
+      margin-bottom: 5em;
+      padding-bottom: 5em;
+    }
+  }
+}

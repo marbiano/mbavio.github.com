@@ -1,0 +1,22 @@
+.nav__item {
+  font-family: $font-sans-serif;
+  font-size: em(13px, $font-size-base);
+  color: rgba($color-black, .4);
+
+  a {
+    color: rgba($color-black, .4);
+  }
+
+  &.is-active {
+    color: $color-black;
+
+    a {
+      color: $color-black;
+    }
+  }
+}
+
+.nav__icons {
+  font-size: 0;
+  color: rgba($color-black, .2);
+}

@@ -1,0 +1,41 @@
+.layout {
+  @include on-columns(5, false) {
+    width: span(4 of 4);
+    margin-right: $grid-margin-side;
+  }
+
+  @include on-columns(6) {
+    width: span(4 of 5);
+  }
+
+  @include on-columns(7) {
+    width: span(4 of 6);
+  }
+
+  @include on-columns(8) {
+    width: span(4 of 7);
+  }
+
+  @include on-columns(9) {
+    width: span(6 of 8);
+  }
+
+  @include on-columns(10) {
+    max-width: span(6 of 9);
+    position: relative;
+    left: span(1 of 9 wide);
+  }
+
+  &.is-simple {
+    @include on-columns(9) {
+      position: relative;
+      left: span(1 of 8 wide);
+      padding-top: 6em;
+    }
+
+    @include on-columns(10) {
+      position: relative;
+      left: span(1 of 9 wide);
+    }
+  }
+}

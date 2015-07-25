@@ -4,7 +4,7 @@ intro: "Consignd tried to revolutionize affiliate marketing. It let you make a l
 client: "Consignd"
 position: "UI Designer & Front-End Dev"
 date: "Sept 2013 - Nov 2013"
-body_class: "p-consignd"
+body_class: "w-consignd"
 ---
 
 This content is beeing created. Please come back later this week or check the changelow for updates!

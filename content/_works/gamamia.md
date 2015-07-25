@@ -4,7 +4,7 @@ intro: "Gamamia is Product Hunt for games. The focus is on bringing to light gre
 client: "Gamamia"
 position: "UI Designer"
 date: "Feb 2015"
-body_class: "p-gamamia"
+body_class: "w-gamamia"
 ---
 
 This content is beeing created. Please come back later this week or check the changelow for updates!

@@ -1,0 +1,45 @@
+.writing-list {
+  @include on-columns(5, false) {
+    margin-right: $grid-margin-side;
+  }
+}
+
+.writing-list__item {
+  @include clearfix;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($color-black, .07);
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+
+    @include on-columns(9) {
+      margin-bottom: 2.5em;
+      padding-bottom: 2.5em;
+    }
+  }
+}
+
+.writing-list__item__main {
+  margin-bottom: 1em;
+
+  @include on-columns(4) {
+    float: left;
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.writing-list__item__extra {
+  @include on-columns(4) {
+    float: right;
+    width: auto;
+    text-align: right;
+  }
+}
+
+.writing-list__item__date {
+  @include on-columns(4) {
+    margin-top: .4em;
+    margin-bottom: .1em;
+  }
+}
