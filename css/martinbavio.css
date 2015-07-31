@@ -133,7 +133,8 @@ body {
         clear: both; } }
 
 .page {
-  padding-top: 60px; }
+  padding-top: 60px;
+  margin-bottom: 5em; }
   @media (min-width: 680px) {
     .page {
       padding-top: 120px; } }
@@ -269,15 +270,15 @@ body {
 
 .page__intro {
   font-family: BentonModernDisp, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.2857142857em;
+  font-size: 1.4285714286em;
   color: rgba(0, 0, 0, 0.9);
   margin-bottom: 2em; }
   @media (min-width: 680px) {
     .page__intro {
-      font-size: 1.5em; } }
+      font-size: 1.6428571429em; } }
   @media (min-width: 1240px) {
     .page__intro {
-      font-size: 1.7142857143em; } }
+      font-size: 1.8571428571em; } }
 
 .page__date {
   font-family: "Benton Sans", Helvetica, Arial, sans-serif;
@@ -588,7 +589,7 @@ body {
 @media (min-width: 680px) {
   .header__nav__item {
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 120px; }
@@ -1250,26 +1251,118 @@ body {
   background-image: url("../img/new_logo.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 8.4337349398%;
+  margin-top: 16.8674698795%;
   margin-left: 8.4337349398%; }
   .home-logo span {
     display: none; }
+  @media (min-width: 680px) {
+    .home-logo {
+      margin-top: 8.4337349398%; } }
+
+.home-tag {
+  margin-left: 8.4337349398%;
+  margin-top: 4.2168674699%;
+  font-family: BentonModernDisp, Georgia, Times, "Times New Roman", serif;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.9); }
+  @media (min-width: 680px) {
+    .home-tag {
+      font-size: 2.4285714286em; } }
+  @media (min-width: 1240px) {
+    .home-tag {
+      font-size: 2.8571428571em; } }
 
 .home-list {
-  margin-top: 4.2168674699%;
-  margin-left: 8.4337349398%; }
+  position: absolute;
+  bottom: 0;
+  left: 8.4337349398%;
+  right: 8.4337349398%;
+  padding-bottom: 1em;
+  border-bottom: 5px solid #6441A5; }
 
 .home-list__item {
   display: inline-block;
   text-transform: uppercase;
-  letter-spacing: 0.125em;
-  font-size: 1.1428571429em; }
+  letter-spacing: 0.1538461538em;
+  font-size: 0.9285714286em;
+  padding: 3px; }
   .home-list__item:not(:last-child) {
     margin-right: 3em; }
   .home-list__item a {
     color: rgba(0, 0, 0, 0.5);
     text-decoration: none; }
     .home-list__item a:hover {
-      background: #6441A5;
-      color: #fff; }
+      color: #291254; }
+  @media (min-width: 820px) {
+    .home-list__item {
+      letter-spacing: 0.1428571429em;
+      font-size: 1em; } }
+
+.about__content {
+  color: rgba(0, 0, 0, 0.6); }
+  .about__content p {
+    margin-bottom: 1em; }
+    .about__content p.is-separated {
+      margin-top: 3em; }
+    @media (min-width: 820px) {
+      .about__content p {
+        max-width: 65.8536585366%; } }
+    @media (min-width: 960px) {
+      .about__content p {
+        max-width: 79.4117647059%; } }
+    @media (min-width: 1100px) {
+      .about__content p {
+        max-width: 65.8536585366%; } }
+    @media (min-width: 1240px) {
+      .about__content p {
+        max-width: 65.8536585366%; } }
+    @media (min-width: 1380px) {
+      .about__content p {
+        max-width: 65.8536585366%; } }
+  .about__content a {
+    color: rgba(100, 65, 165, 0.95);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    border-bottom: 1px solid rgba(100, 65, 165, 0.2); }
+    .about__content a:hover {
+      color: #291254;
+      border-color: rgba(41, 18, 84, 0.6); }
+  .about__content strong {
+    color: rgba(0, 0, 0, 0.8); }
+
+.about__content__image {
+  margin-top: 1.5em; }
+  .about__content__image img {
+    display: block;
+    width: 100%; }
+  @media (min-width: 1240px) {
+    .about__content__image {
+      width: 117.073170732%; } }
+  @media (min-width: 1380px) {
+    .about__content__image {
+      width: 117.073170732%; } }
+
+.content-in-progress {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1.5em;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  font-size: 0.8571428571em;
+  position: relative;
+  margin-bottom: 5em;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 50px; }
+  .content-in-progress:before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/icons/pencil.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -18px;
+    opacity: .6; }
 /*# sourceMappingURL=martinbavio.css.map */
