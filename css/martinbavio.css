@@ -1191,6 +1191,20 @@ body {
         float: left;
         margin-right: 2.4390243902%;
         margin-top: 0; } }
+  .post__content__text .is-final-link {
+    display: inline-block;
+    line-height: 1;
+    color: #6441A5;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1666666667em;
+    font-size: 0.6666666667em;
+    margin-top: 1.5em;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(100, 65, 165, 0.2); }
+    .post__content__text .is-final-link:hover {
+      color: #291254;
+      border-color: rgba(41, 18, 84, 0.6); }
 
 .post__content__share {
   margin-top: 2em; }
@@ -1277,8 +1291,7 @@ body {
   bottom: 0;
   left: 8.4337349398%;
   right: 8.4337349398%;
-  padding-bottom: 1em;
-  border-bottom: 5px solid #6441A5; }
+  padding-bottom: 1em; }
 
 .home-list__item {
   display: inline-block;
