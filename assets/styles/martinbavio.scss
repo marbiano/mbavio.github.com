@@ -16,4 +16,32 @@
 @import "modules/post";
 @import "modules/journal-list";
 @import "modules/home-list";
+@import "modules/about";
+
+.content-in-progress {
+  background: rgba($color-black, .05);
+  padding: 1.5em;
+  font-family: $font-sans-serif;
+  font-size: em(12px, $font-size-base);
+  position: relative;
+  margin-bottom: 5em;
+  color: rgba($color-black, .6);
+  margin-left: 50px;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url('../img/icons/pencil.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -18px;
+    opacity: .6;
+  }
+
+}
 

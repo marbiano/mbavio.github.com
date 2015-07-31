@@ -6,5 +6,4 @@ position: "UI Designer & Front-End Dev"
 date: "Dec 2011 - Dec 2012"
 body_class: "w-zokos"
 ---
-
-This content is beeing created. Please come back later this week or check the changelow for updates!
+<div class="content-in-progress">The description of this project is beeing written, sorry for the inconvinience. If you are still interested to know what I did here, please come back later or check the changelog for updates!</div>

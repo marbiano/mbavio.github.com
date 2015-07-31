@@ -36,7 +36,7 @@
           {% assign pageUrl = page.url | split: '/' %}
           <li class="header__nav__item nav__item {% if pageUrl[1] == 'about' %}is-active{% endif %}"><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
           <li class="header__nav__item nav__item {% if pageUrl[1] == 'work' %}is-active{% endif %}"><a href="{{ "/work" | prepend: site.baseurl }}">Work</a></li>
-          <li class="header__nav__item nav__item {% if pageUrl[1] == 'writing' %}is-active{% endif %}"><a href="{{ "/writing" | prepend: site.baseurl }}">Writing</a></li>
+          <!-- <li class="header__nav__item nav__item {% if pageUrl[1] == 'writing' %}is-active{% endif %}"><a href="{{ "/writing" | prepend: site.baseurl }}">Writing</a></li> -->
           <li class="header__nav__item nav__item {% if pageUrl[1] == 'journal' %}is-active{% endif %}"><a href="{{ "/journal" | prepend: site.baseurl }}">Journal</a></li>
         </ul>
       </nav>

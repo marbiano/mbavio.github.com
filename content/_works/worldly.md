@@ -6,7 +6,6 @@ position: "Lead UI Designer"
 date: "Jul 2014 - Jun 2015"
 body_class: "w-worldly"
 ---
-
 ## Why did it matter?
 
 Because there needs to be a better way to discover things in the world. A smarter system, without all the noise around. You want to go somewhere, you find the best tips and people to connect with in Worldly with a simple search. It would make people’s lifes easier. And that’s a mission I was ready to stand by.

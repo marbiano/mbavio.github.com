@@ -6,7 +6,6 @@ position: "Lead UI Designer"
 date: "Jan 2013 - Aug 2013"
 body_class: "w-thread-council"
 ---
-
 ## Why did it matter?
 
 Because there are thousand of amazing creative minds trapped into the corporate world. So a platform to free some of them and allow them to work on their own ideas and wishes, was a concept I was in love right from the first pitch. It was like The Matrix for artists, you know?

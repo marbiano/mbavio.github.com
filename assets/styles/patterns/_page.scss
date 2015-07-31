@@ -1,5 +1,6 @@
 .page {
   padding-top: 60px;
+  margin-bottom: 5em;
 
   @include on-columns(5) {
     padding-top: 120px;
@@ -143,16 +144,16 @@
 
 .page__intro {
   font-family: $font-serif-display;
-  font-size: em(18px, $font-size-base);
+  font-size: em(20px, $font-size-base);
   color: rgba($color-black, .9);
   margin-bottom: 2em;
 
   @include on-columns(5) {
-    font-size: em(21px, $font-size-base);
+    font-size: em(23px, $font-size-base);
   }
 
   @include on-columns(9) {
-    font-size: em(24px, $font-size-base);
+    font-size: em(26px, $font-size-base);
   }
 }
 
