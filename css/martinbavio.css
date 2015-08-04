@@ -1344,8 +1344,8 @@ body {
 
 .changelog__todo li {
   font-family: "Benton Modern", Georgia, Times, "Times New Roman", serif;
-  font-size: 1.1428571429em;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2142857143em;
+  color: rgba(0, 0, 0, 0.75);
   list-style: outside circle; }
 
 .changelog__todo li:not(:last-child) {
@@ -1397,4 +1397,8 @@ body {
     left: -50px;
     margin-top: -18px;
     opacity: .6; }
+  .content-in-progress a {
+    color: #6441a5; }
+    .content-in-progress a:hover {
+      color: #291254; }
 /*# sourceMappingURL=martinbavio.css.map */
