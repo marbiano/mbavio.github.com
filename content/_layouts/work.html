@@ -24,6 +24,12 @@ layout: base
   </div>
   <div class="page__text work__text">{{ content }}</div>
 </div>
-<div class="page__aside">
-  <div class="page__aside__media" style="background-image: url(/img/collages/{{ page.client | downcase | replace:' ','-' }}.jpg)"></div>
+<div class="page__aside work__aside">
+  {% if page.collage != null %}
+    <div class="page__aside__media work__aside__media" style="background-image: url(/img/collages/{{ page.client | downcase | replace:' ','-' }}.jpg)"></div>
+  {% endif %}
 </div>
+
+{% if page.collage != null %}
+  <div class="work__disable-aside"><span>Back</span></div>
+{% endif %}

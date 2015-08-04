@@ -5,6 +5,7 @@ client: "Worldly"
 position: "Lead UI Designer"
 date: "Jul 2014 - Jun 2015"
 body_class: "w-worldly"
+collage: true
 ---
 ## Why did it matter?
 

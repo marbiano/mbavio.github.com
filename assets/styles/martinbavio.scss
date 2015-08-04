@@ -17,6 +17,7 @@
 @import "modules/journal-list";
 @import "modules/home-list";
 @import "modules/about";
+@import "modules/changelog";
 
 .content-in-progress {
   background: rgba($color-black, .05);
@@ -41,6 +42,14 @@
     left: -50px;
     margin-top: -18px;
     opacity: .6;
+  }
+
+  a {
+    color: rgba($color-brand, 1);
+
+    &:hover {
+      color: $color-brand-dark;
+    }
   }
 
 }

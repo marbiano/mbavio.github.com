@@ -5,6 +5,7 @@ client: "Thread Council"
 position: "Lead UI Designer"
 date: "Jan 2013 - Aug 2013"
 body_class: "w-thread-council"
+collage: true
 ---
 ## Why did it matter?
 

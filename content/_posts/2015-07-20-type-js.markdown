@@ -1,6 +1,0 @@
----
-layout: post
-title: "Type.js"
-date: 2015-07-20T19:55:16-03:00
----
-A new project from Nathan Ford that uses non-standard CSS rules to provide finer typographic control of web pages, including control over kerning pairs, widows, rags and font-size when using viewport units.

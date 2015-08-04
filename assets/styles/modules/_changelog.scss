@@ -1,0 +1,49 @@
+.changelog__todo {
+  ul {
+    margin-top: 1.5em;
+  }
+
+  li {
+    font-family: $font-serif;
+    font-size: em(17px, $font-size-base);
+    color: rgba($color-black, .75);
+    list-style: outside circle;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: .5em;
+  }
+}
+
+.changelog__did {
+  border-top: 4px double rgba($color-black, .05);
+  margin-top: 3em;
+  padding-top: 3em;
+}
+
+.changelog__did__title {
+  color: rgba($color-black, .6);
+}
+
+.changelog__did__day {
+  color: rgba($color-black, .5);
+
+  h3 {
+    text-transform: uppercase;
+    font-size: em(12px, $font-size-base);
+    letter-spacing: em(2px, 12px);
+    margin-top: 2em;
+    color: rgba($color-black, .65);
+    margin-bottom: .5em;
+  }
+
+  li {
+    font-family: $font-serif;
+    font-size: em(16px, $font-size-base);
+    list-style: outside circle;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: .5em;
+  }
+}
