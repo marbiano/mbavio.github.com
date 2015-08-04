@@ -1339,6 +1339,42 @@ body {
     .about__content__image {
       width: 117.073170732%; } }
 
+.changelog__todo ul {
+  margin-top: 1.5em; }
+
+.changelog__todo li {
+  font-family: "Benton Modern", Georgia, Times, "Times New Roman", serif;
+  font-size: 1.1428571429em;
+  color: rgba(0, 0, 0, 0.6);
+  list-style: outside circle; }
+
+.changelog__todo li:not(:last-child) {
+  margin-bottom: .5em; }
+
+.changelog__did {
+  border-top: 4px double rgba(0, 0, 0, 0.05);
+  margin-top: 3em;
+  padding-top: 3em; }
+
+.changelog__did__title {
+  color: rgba(0, 0, 0, 0.6); }
+
+.changelog__did__day {
+  color: rgba(0, 0, 0, 0.5); }
+  .changelog__did__day h3 {
+    text-transform: uppercase;
+    font-size: 0.8571428571em;
+    letter-spacing: 0.1666666667em;
+    margin-top: 2em;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: .5em; }
+  .changelog__did__day li {
+    font-family: "Benton Modern", Georgia, Times, "Times New Roman", serif;
+    font-size: 1.1428571429em;
+    list-style: outside circle; }
+  .changelog__did__day li:not(:last-child) {
+    margin-bottom: .5em; }
+
 .content-in-progress {
   background: rgba(0, 0, 0, 0.05);
   padding: 1.5em;
