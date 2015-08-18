@@ -831,6 +831,13 @@ body {
   .is-aside-activated .work__disable-aside {
     display: block; }
 
+.work__screenshot {
+  margin: 2em 0; }
+  .work__screenshot img {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(41, 18, 84, 0.1); }
+
 .work-list::after {
   clear: both;
   content: "";
