@@ -17,7 +17,7 @@
   }
 
   $('.work__screenshot > a').fluidbox({
-    viewportFill: 1
+    viewportFill: .95
   });
 
 }).call(this);
