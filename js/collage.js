@@ -16,4 +16,8 @@
     };
   }
 
+  $('.work__screenshot > a').fluidbox({
+    viewportFill: 1
+  });
+
 }).call(this);

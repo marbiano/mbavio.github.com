@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
+    <title>The Portfolio of Martin Bavio</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Sep 2015 18:40:34 -0300</pubDate>
-    <lastBuildDate>Fri, 04 Sep 2015 18:40:34 -0300</lastBuildDate>
+    <link>http://martinbavio.com/</link>
+    <atom:link href="http://martinbavio.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 08 Sep 2015 22:11:07 -0300</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2015 22:11:07 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,8 +17,8 @@
 &lt;p&gt;&lt;a href=&quot;https://www.kickstarter.com/projects/retronator/retronator-pixel-art-academy&quot; class=&quot;is-final-link&quot;&gt;Check their Kickstarter campaign&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 18 Aug 2015 16:50:24 -0300</pubDate>
-        <link>http://yourdomain.com/journal/pixel-art-academy</link>
-        <guid isPermaLink="true">http://yourdomain.com/journal/pixel-art-academy</guid>
+        <link>http://martinbavio.com/journal/pixel-art-academy</link>
+        <guid isPermaLink="true">http://martinbavio.com/journal/pixel-art-academy</guid>
         
         
       </item>
@@ -30,8 +30,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0316378216/&quot; class=&quot;is-final-link&quot;&gt;The Book on Amazon&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 04 Aug 2015 18:46:24 -0300</pubDate>
-        <link>http://yourdomain.com/journal/cabin-porn-book-edition</link>
-        <guid isPermaLink="true">http://yourdomain.com/journal/cabin-porn-book-edition</guid>
+        <link>http://martinbavio.com/journal/cabin-porn-book-edition</link>
+        <guid isPermaLink="true">http://martinbavio.com/journal/cabin-porn-book-edition</guid>
         
         
       </item>
@@ -43,8 +43,8 @@
 &lt;p&gt;&lt;a href=&quot;http://www.thelastofus.playstation.com/&quot; class=&quot;is-final-link&quot;&gt;More About The Game&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 31 Jul 2015 14:34:59 -0300</pubDate>
-        <link>http://yourdomain.com/journal/the-last-of-us</link>
-        <guid isPermaLink="true">http://yourdomain.com/journal/the-last-of-us</guid>
+        <link>http://martinbavio.com/journal/the-last-of-us</link>
+        <guid isPermaLink="true">http://martinbavio.com/journal/the-last-of-us</guid>
         
         
       </item>
